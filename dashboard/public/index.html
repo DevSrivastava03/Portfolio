@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
+        <input type="text" id="date-range" placeholder="Select Date Range">
+        <button onclick="fetchStockData()">Get Stock Data</button>
+        <button onclick="addFavorite()">Add to Favorites</button>
+        <select id="chartType" onchange="updateChartType()">
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value="radar">Radar</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="polarArea">Polar Area</option>
+        </select>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <h1>Stock Market Dashboard</h1>
+            <canvas id="stockChart"></canvas>
+        </div>
+        <div class="favorites">
+            <h2>Favorite Stocks</h2>
+            <ul id="favoritesList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

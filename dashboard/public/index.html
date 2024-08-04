@@ -10,28 +10,34 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
-    <div class="search-bar">
-        <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
-        <input type="text" id="date-range" placeholder="Select Date Range">
-        <button onclick="fetchStockData()">Get Stock Data</button>
-        <button onclick="addFavorite()">Add to Favorites</button>
-        <select id="chartType" onchange="updateChartType()">
-            <option value="line">Line</option>
-            <option value="bar">Bar</option>
-            <option value="pie">Pie</option>
-            <option value="radar">Radar</option>
-            <option value="doughnut">Doughnut</option>
-            <option value="polarArea">Polar Area</option>
-        </select>
+    <div class="label">
+        <div class="text-wrapper">Stock Market Dashboard</div>
+    </div>
+    <div class="box">
+        <form class="rectangle" onsubmit="fetchStockData(); return false;">
+            <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
+            <input type="text" id="date-range" placeholder="Select Date Range">
+            <button type="submit">Get Stock Data</button>
+            <button type="button" onclick="addFavorite()">Add to Favorites</button>
+            <select id="chartType" onchange="updateChartType()">
+                <option value="line">Line</option>
+                <option value="bar">Bar</option>
+                <option value="pie">Pie</option>
+                <option value="radar">Radar</option>
+                <option value="doughnut">Doughnut</option>
+                <option value="polarArea">Polar Area</option>
+            </select>
+        </form>
     </div>
     <div class="main-content">
         <div class="container">
-            <h1>Stock Market Dashboard</h1>
             <canvas id="stockChart"></canvas>
         </div>
-        <div class="favorites">
-            <h2>Favorite Stocks</h2>
-            <ul id="favoritesList"></ul>
+        <div class="favorites-box">
+            <div class="favorites-rectangle">
+                <h2>Favorite Stocks</h2>
+                <ul id="favoritesList"></ul>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -79,10 +79,30 @@ function createChart(dates, prices, symbol) {
     });
 }
 
-function addFavorite() {
+async function fetchStockFullName(symbol) {
+    const apiUrl = `https://api.polygon.io/v3/reference/tickers?ticker=${symbol}&apiKey=${apiKey}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        if (data.results && data.results.length > 0) {
+            return data.results[0].name;
+        }
+        return symbol;
+    } catch (error) {
+        console.error('Error fetching stock name:', error);
+        return symbol;
+    }
+}
+
+async function addFavorite() {
     const symbol = document.getElementById('symbol').value.toUpperCase();
-    if (symbol && !favorites.includes(symbol)) {
-        favorites.push(symbol);
+    if (symbol && !favorites.some(fav => fav.symbol === symbol)) {
+        const fullName = await fetchStockFullName(symbol);
+        favorites.push({ symbol, fullName });
         updateFavoritesList();
         saveData();
     }
@@ -92,10 +112,10 @@ function updateFavoritesList() {
     const favoritesList = document.getElementById('favoritesList');
     favoritesList.innerHTML = '';
 
-    favorites.forEach(symbol => {
+    favorites.forEach(fav => {
         const li = document.createElement('li');
-        li.textContent = symbol;
-        li.onclick = () => fetchStockData(symbol); // Update chart with clicked stock
+        li.textContent = `${fav.fullName} (${fav.symbol})`;
+        li.onclick = () => fetchStockData(fav.symbol); // Update chart with clicked stock
         favoritesList.appendChild(li);
     });
 }

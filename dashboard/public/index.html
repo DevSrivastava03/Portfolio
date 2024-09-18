@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Market Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     <div class="label">
         <div class="text-wrapper">Stock Market Dashboard</div>
     </div>
-    <div class="box">
-        <form class="rectangle" onsubmit="fetchStockData(); return false;">
-            <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
-            <input type="text" id="date-range" placeholder="Select Date Range">
-            <button type="submit">Get Stock Data</button>
-            <button type="button" onclick="addFavorite()">Add to Favorites</button>
-            <select id="chartType" onchange="updateChartType()">
-                <option value="line">Line</option>
-                <option value="bar">Bar</option>
-                <option value="pie">Pie</option>
-                <option value="radar">Radar</option>
-                <option value="doughnut">Doughnut</option>
-                <option value="polarArea">Polar Area</option>
-            </select>
-        </form>
+    <div class="search-bar">
+        <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
+        <button type="button" onclick="fetchStockData()">Get Stock Data</button>
+        <button type="button" onclick="addFavorite()">Add to Favorites</button>
+        <select id="chartType" onchange="updateChartType()">
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value="radar">Radar</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="polarArea">Polar Area</option>
+        </select>
     </div>
     <div class="main-content">
         <div class="container">

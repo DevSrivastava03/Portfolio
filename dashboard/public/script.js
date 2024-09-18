@@ -1,20 +1,13 @@
-const apiKey = 'G7Edp2N5fosqPdvoOkKr9zAr114pxC7J';
+const apiKey = 'cqvlvu9r01qh7uf17tfgcqvlvu9r01qh7uf17tg0';
 let chart;
 let favorites = [];
-let chartType = 'line';
 
-async function fetchStockData(symbol = 'AAPL') {
-    symbol = document.getElementById('symbol').value.toUpperCase() || symbol;
-    const dateRange = document.getElementById('date-range').value.split(' to ');
 
-    if (dateRange.length !== 2) {
-        alert('Please select a valid date range.');
-        return;
-    }
-
-    const [startDate, endDate] = dateRange;
-
-    const apiUrl = `https://api.polygon.io/v2/aggs/ticker/${symbol}/range/1/day/${startDate}/${endDate}?apiKey=${apiKey}`;
+async function fetchStockData() {
+    const symbol = document.getElementById('symbol').value.toUpperCase() || 'AAPL';
+    const startDate = Math.floor(new Date('2023-01-01').getTime() / 1000); 
+    const endDate = Math.floor(new Date().getTime() / 1000); 
+    const apiUrl = `https://finnhub.io/api/v1/stock/candle?symbol=${symbol}&resolution=D&from=${startDate}&to=${endDate}&token=${apiKey}`;
 
     try {
         const response = await fetch(apiUrl);
@@ -22,76 +15,31 @@ async function fetchStockData(symbol = 'AAPL') {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        const results = data.results;
-
-        if (!results) {
-            alert('Invalid symbol or API limit reached');
+        if (data.s !== 'ok') {
+            alert('No data available for the given symbol and date range');
             return;
         }
 
-        const dates = results.map(result => new Date(result.t).toISOString().split('T')[0]);
-        const prices = results.map(result => result.c);
+        const dates = data.t.map(timestamp => new Date(timestamp * 1000).toLocaleDateString());
+        const prices = data.c;
 
-        createChart(dates.reverse(), prices.reverse(), symbol);
+        createChart(dates, prices, symbol);
     } catch (error) {
         console.error('Error fetching stock data:', error);
         alert('Failed to fetch stock data');
     }
 }
 
-function createChart(dates, prices, symbol) {
-    const ctx = document.getElementById('stockChart').getContext('2d');
-    
-    if (chart) {
-        chart.destroy();
-    }
-
-    chart = new Chart(ctx, {
-        type: chartType,
-        data: {
-            labels: dates,
-            datasets: [{
-                label: `Stock Prices of ${symbol}`,
-                data: prices,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 2,
-                fill: false
-            }]
-        },
-        options: {
-            scales: {
-                x: {
-                    display: chartType !== 'pie' && chartType !== 'doughnut' && chartType !== 'polarArea',
-                    title: {
-                        display: true,
-                        text: 'Date'
-                    }
-                },
-                y: {
-                    display: chartType !== 'pie' && chartType !== 'doughnut' && chartType !== 'polarArea',
-                    title: {
-                        display: true,
-                        text: 'Price (USD)'
-                    }
-                }
-            }
-        }
-    });
-}
-
-async function fetchStockFullName(symbol) {
-    const apiUrl = `https://api.polygon.io/v3/reference/tickers?ticker=${symbol}&apiKey=${apiKey}`;
-
+// Fetch company name using Finnhub API
+async function fetchStockName(symbol) {
+    const apiUrl = `https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=${apiKey}`;
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        if (data.results && data.results.length > 0) {
-            return data.results[0].name;
-        }
-        return symbol;
+        return data.name || symbol;
     } catch (error) {
         console.error('Error fetching stock name:', error);
         return symbol;
@@ -101,10 +49,9 @@ async function fetchStockFullName(symbol) {
 async function addFavorite() {
     const symbol = document.getElementById('symbol').value.toUpperCase();
     if (symbol && !favorites.some(fav => fav.symbol === symbol)) {
-        const fullName = await fetchStockFullName(symbol);
-        favorites.push({ symbol, fullName });
+        const name = await fetchStockName(symbol);
+        favorites.push({ symbol, name });
         updateFavoritesList();
-        saveData();
     }
 }
 
@@ -114,40 +61,34 @@ function updateFavoritesList() {
 
     favorites.forEach(fav => {
         const li = document.createElement('li');
-        li.textContent = `${fav.fullName} (${fav.symbol})`;
-        li.onclick = () => fetchStockData(fav.symbol); // Update chart with clicked stock
+        li.textContent = `${fav.name} (${fav.symbol})`;
+        li.onclick = () => fetchStockDataBySymbol(fav.symbol);
         favoritesList.appendChild(li);
     });
 }
 
-function updateChartType() {
-    chartType = document.getElementById('chartType').value;
-    fetchStockData(document.getElementById('symbol').value || 'AAPL');
-}
+async function fetchStockData() {
+    const symbol = document.getElementById('symbol').value.toUpperCase() || 'AAPL';
+    const startDate = Math.floor(new Date('2023-01-01').getTime() / 1000); // Convert to UNIX timestamp
+    const endDate = Math.floor(new Date().getTime() / 1000); // Current date UNIX timestamp
+    const apiUrl = `https://finnhub.io/api/v1/stock/candle?symbol=${symbol}&resolution=D&from=${startDate}&to=${endDate}&token=${apiKey}`;
 
-async function saveData() {
     try {
-        const response = await fetch('/api/data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ favorites })
-        });
+        const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
+        const data = await response.json();
+        if (data.s !== 'ok') {
+            throw new Error('No data available for the given symbol and date range');
+        }
+
+        const dates = data.t.map(timestamp => new Date(timestamp * 1000).toLocaleDateString());
+        const prices = data.c;
+
+        createChart(dates, prices, symbol);
     } catch (error) {
-        console.error('Error saving data:', error);
+        console.error('Error fetching stock data:', error.message);
+        alert('Failed to fetch stock data: ' + error.message);
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetchStockData();
-
-    flatpickr("#date-range", {
-        mode: "range",
-        dateFormat: "Y-m-d",
-        defaultDate: ["2023-01-01", new Date().toISOString().split('T')[0]]
-    });
-});

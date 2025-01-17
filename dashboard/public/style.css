@@ -1,130 +1,126 @@
-@font-face {
-    font-family: 'LemonMilkBold';
-    src: url('fonts/LEMONMILK-Bold.otf') format('opentype');
-}
-
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
 }
 
-.label {
-    height: 118px;
+header {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: #f5f5f5;
-    z-index: 1;
-}
-
-.label .text-wrapper {
-    color: #000000;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
     text-align: center;
-    width: 100%;
-    max-width: 1188px;
-    font-family: 'LemonMilkBold', Arial, sans-serif;
+    /* background-color: #4CAF50; */
+    color: #ffffe3;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Search Bar */
 .search-bar {
+    margin: 20px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    margin-top: 180px;
+    gap: 10px;
 }
 
-.search-bar input[type="text"] {
+.search-bar input {
     width: 300px;
-    margin-right: 10px;
     padding: 10px;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 25px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+    border-radius: 4px;
 }
 
-.search-bar input[type="text"]:focus {
-    outline: none;
-    border-color: #000;
-}
-
-.search-bar button, .search-bar select {
-    padding: 10px 15px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffe3;
+    background-color: #4a4a31;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: #f5f5f5;
-    margin-left: 10px;
+    transition: background-color 0.3s;
 }
 
-.search-bar select {
-    margin-left: 10px;
+.search-bar button:hover {
+    background-color: #45a049;
 }
 
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    font-size: 1rem;
+    color: #ffffe3;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Main Content */
 .main-content {
     display: flex;
-    width: 80%;
-    margin-top: 20px;
-    justify-content: space-between;
+    width: 90%;
+    gap: 20px;
+    margin: 20px 0;
 }
 
-.container {
-    text-align: center;
-    background-color: white;
+.chart-container {
+    flex: 3;
+    background: #dbdbc3;
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 70%;
 }
 
-.favorites-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 509px;
-    width: 487px;
-    margin-left: 20px;
-}
-
-.favorites-rectangle {
-    background-color: #ececec;
-    border-radius: 61px;
-    height: 100%;
-    width: 100%;
+.favorites-container {
+    flex: 1;
+    background: #8a8a7b;
     padding: 20px;
-    overflow-y: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.favorites-rectangle h2 {
-    font-family: 'LemonMilkBold', Arial, sans-serif;
+.favorites-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.favorites-rectangle ul {
-    list-style-type: none;
+.favorites-box ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.favorites-rectangle li {
-    padding: 5px 0;
+.favorites-box li {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 4px;
     cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+    transition: background-color 0.3s;
 }
 
-canvas {
-    margin-top: 20px;
+.favorites-box li:hover {
+    background-color: #e0e0e0;
 }
+.search-bar input[type="date"] {
+    width: 160px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+

@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Market Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.0.1"></script>
 </head>
 <body>
-    <div class="label">
-        <div class="text-wrapper">Stock Market Dashboard</div>
-    </div>
+    <header class="header">
+        <h1>Stock Market Dashboard</h1>
+        <p>Track and visualize stock data effortlessly.</p>
+    </header>
+
     <div class="search-bar">
         <input type="text" id="symbol" placeholder="Enter Stock Symbol (e.g., AAPL)">
-        <button type="button" onclick="fetchStockData()">Get Stock Data</button>
+        <input type="date" id="startDate" placeholder="Start Date">
+        <input type="date" id="endDate" placeholder="End Date">
+        <button type="button" onclick="fetchStockData()">Search</button>
         <button type="button" onclick="addFavorite()">Add to Favorites</button>
-        <select id="chartType" onchange="updateChartType()">
-            <option value="line">Line</option>
-            <option value="bar">Bar</option>
-            <option value="pie">Pie</option>
-            <option value="radar">Radar</option>
-            <option value="doughnut">Doughnut</option>
-            <option value="polarArea">Polar Area</option>
-        </select>
     </div>
-    <div class="main-content">
-        <div class="container">
+    
+
+    <div id="loadingSpinner" class="loading-spinner">Loading...</div>
+
+    <main class="main-content">
+        <div class="chart-container">
             <canvas id="stockChart"></canvas>
         </div>
-        <div class="favorites-box">
-            <div class="favorites-rectangle">
+        <aside class="favorites-container">
+            <div class="favorites-box">
                 <h2>Favorite Stocks</h2>
                 <ul id="favoritesList"></ul>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
+
+   
+
     <script src="script.js"></script>
 </body>
 </html>

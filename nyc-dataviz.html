@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC 3D Data Visualization — Dev Srivastava</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-mark">DS</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-name">Dev Srivastava</span>
+            </a>
+            <a href="index.html" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Back to Work</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-hero">
+        <div class="case-hero-wrapper">
+            <div class="case-meta">
+                <span class="meta-number">001</span>
+                <span class="meta-status">In Progress</span>
+            </div>
+            
+            <h1 class="case-title">NYC Urban Data Visualization</h1>
+            <p class="case-subtitle">Interactive 3D exploration of New York City's urban systems</p>
+            
+            <div class="case-info-grid">
+                <div class="info-item">
+                    <span class="info-label">Timeline</span>
+                    <span class="info-value">16 weeks, Fall 2024</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">Product Designer, Developer</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tools</span>
+                    <span class="info-value">Three.js, D3.js, React, Figma</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Development Phase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="case-featured">
+        <div class="case-featured-wrapper">
+            <div class="featured-image gradient-cyan">
+                <div class="image-placeholder">3D Visualization Preview</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Overview</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <p class="lead-paragraph">An ambitious exploration of New York City's urban data through immersive 3D visualization, synthesizing transportation networks, demographic patterns, and infrastructure systems into a cohesive, explorable interface.</p>
+                    
+                    <p>This project emerged from a fascination with how cities function as complex adaptive systems. NYC generates massive amounts of data daily—subway ridership, taxi movements, building permits, demographic shifts—but this data typically exists in isolated datasets, difficult to understand holistically.</p>
+                    
+                    <p>The challenge was to create a visualization system that could render this complexity accessible and engaging, transforming abstract numbers into spatial understanding while maintaining performance and usability.</p>
+                </div>
+                <div class="content-aside">
+                    <div class="aside-block">
+                        <h4>Challenge</h4>
+                        <p>How might we visualize NYC's urban systems in a way that reveals patterns invisible in traditional 2D maps or data tables?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Research & Discovery</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Data Sources</h3>
+                    <p>I began by identifying and evaluating multiple NYC open data sources:</p>
+                    
+                    <ul class="styled-list">
+                        <li><strong>NYC Open Data Portal:</strong> Building footprints, subway stations, demographic census data</li>
+                        <li><strong>MTA Real-Time Feeds:</strong> Subway and bus movement data</li>
+                        <li><strong>Taxi & Limousine Commission:</strong> Trip records and traffic patterns</li>
+                        <li><strong>Department of City Planning:</strong> Zoning maps and land use data</li>
+                    </ul>
+                    
+                    <h3>Technical Constraints</h3>
+                    <p>Early prototyping revealed several challenges:</p>
+                    <ul class="styled-list">
+                        <li>Rendering 1M+ building polygons in real-time</li>
+                        <li>Managing multiple simultaneous data layers without performance degradation</li>
+                        <li>Creating intuitive 3D navigation that doesn't disorient users</li>
+                        <li>Designing responsive interactions that work across devices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Design Process</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Information Architecture</h3>
+                    <p>I developed a layered approach to data visualization, allowing users to progressively explore complexity:</p>
+                    
+                    <div class="process-grid">
+                        <div class="process-item">
+                            <span class="process-number">01</span>
+                            <h4>Base Layer</h4>
+                            <p>3D building geometry showing NYC's physical form</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">02</span>
+                            <h4>Data Overlay</h4>
+                            <p>Color-coded visualizations of demographic, transit, or economic data</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">03</span>
+                            <h4>Temporal Animation</h4>
+                            <p>Time-based changes showing evolution and movement patterns</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">04</span>
+                            <h4>Detail View</h4>
+                            <p>Drill-down into specific neighborhoods or data points</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Interaction Design</h3>
+                    <p>Navigation in 3D space requires careful consideration. I designed a control system that balances exploratory freedom with guided discovery:</p>
+                    <ul class="styled-list">
+                        <li><strong>Orbital camera controls</strong> for intuitive rotation and zoom</li>
+                        <li><strong>Landmark-based navigation</strong> allowing quick jumps to key locations</li>
+                        <li><strong>Filter panel</strong> for toggling data layers and adjusting visualization parameters</li>
+                        <li><strong>Timeline scrubber</strong> for temporal data exploration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Grid -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Visual Explorations</h2>
+            </div>
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-cyan">Wireframe Studies</div>
+                    <p class="visual-caption">Early wireframes exploring layout and control placement</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-cyan">Color Systems</div>
+                    <p class="visual-caption">Color palette development for different data types</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-cyan">3D Prototypes</div>
+                    <p class="visual-caption">Three.js prototypes testing rendering performance</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-cyan">UI Components</div>
+                    <p class="visual-caption">Interface elements and control systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Technical Implementation</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Architecture</h3>
+                    <p>The system is built with modern web technologies, prioritizing performance and maintainability:</p>
+                    
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>Three.js</h4>
+                            <p>3D rendering engine, custom shaders for data visualization</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>React</h4>
+                            <p>UI framework for controls and data management</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>D3.js</h4>
+                            <p>Data processing and scale generation</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>WebGL</h4>
+                            <p>GPU-accelerated rendering for smooth performance</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Performance Optimizations</h3>
+                    <ul class="styled-list">
+                        <li>Level-of-detail (LOD) system reducing geometry based on camera distance</li>
+                        <li>Frustum culling to only render visible buildings</li>
+                        <li>Instanced rendering for repeated geometries</li>
+                        <li>Web Workers for data processing off the main thread</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Current Status & Next Steps</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>What's Working</h3>
+                    <ul class="styled-list">
+                        <li>Successfully rendering 100,000+ building polygons at 60fps</li>
+                        <li>Intuitive camera controls tested with 10+ users</li>
+                        <li>Data pipeline processing and visualizing multiple data sources</li>
+                        <li>Responsive design working across desktop and tablet</li>
+                    </ul>
+                    
+                    <h3>In Development</h3>
+                    <ul class="styled-list">
+                        <li><strong>Temporal animations:</strong> Showing changes over time (day/night cycles, seasonal patterns)</li>
+                        <li><strong>Advanced filtering:</strong> More granular control over data visualization</li>
+                        <li><strong>Storytelling mode:</strong> Guided tours highlighting specific urban phenomena</li>
+                        <li><strong>Mobile optimization:</strong> Touch controls and performance improvements</li>
+                    </ul>
+                    
+                    <h3>Learnings</h3>
+                    <p>This project taught me the importance of balancing ambition with pragmatism. Early versions attempted to visualize too much simultaneously, resulting in visual noise and performance issues. Through iteration, I learned to prioritize clarity and progressive disclosure—showing users one layer at a time while making it easy to explore deeper.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="case-nav">
+        <div class="case-nav-wrapper">
+            <a href="feedbacknow.html" class="case-nav-link">
+                <span class="nav-label">Next Project</span>
+                <span class="nav-title">FeedbackNow</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </a>
+            <a href="index.html#work" class="case-nav-link-center">All Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <p class="footer-copyright">© 2024 Dev Srivastava</p>
+                <p class="footer-location">New York, NY</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

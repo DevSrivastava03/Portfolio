@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedbackNow — Dev Srivastava</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-mark">DS</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-name">Dev Srivastava</span>
+            </a>
+            <a href="index.html" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Back to Work</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-hero">
+        <div class="case-hero-wrapper">
+            <div class="case-meta">
+                <span class="meta-number">002</span>
+                <span class="meta-status">Internship</span>
+            </div>
+            
+            <h1 class="case-title">FeedbackNow</h1>
+            <p class="case-subtitle">Customer-focused insights, simplified</p>
+            
+            <div class="case-info-grid">
+                <div class="info-item">
+                    <span class="info-label">Timeline</span>
+                    <span class="info-value">8 weeks, Summer 2024</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">Product Design Intern</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Team</span>
+                    <span class="info-value">2 Designers, 3 Engineers, PM</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Launched, In Production</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="case-featured">
+        <div class="case-featured-wrapper">
+            <div class="featured-image gradient-purple">
+                <div class="image-placeholder">Dashboard Overview</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Overview</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <p class="lead-paragraph">During my summer internship, I partnered with leadership to design interactive dashboards and visuals that translated complex customer feedback data into clear, actionable insights for enterprise teams.</p>
+                    
+                    <p>FeedbackNow is a B2B SaaS platform that aggregates customer feedback from multiple channels—surveys, support tickets, reviews, social media—into a unified analytics dashboard. The company had grown rapidly, but their existing interface struggled to scale with increasing data complexity and diverse user needs.</p>
+                    
+                    <p>My role focused on redesigning the core dashboard experience and developing a component library that could accommodate future feature expansion while maintaining visual consistency and usability.</p>
+                </div>
+                <div class="content-aside">
+                    <div class="aside-block">
+                        <h4>Business Goal</h4>
+                        <p>Reduce time-to-insight for enterprise customers while improving platform scalability and visual consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>The Problem</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>User Pain Points</h3>
+                    <p>Through stakeholder interviews and user research sessions, I identified several key challenges:</p>
+                    
+                    <ul class="styled-list">
+                        <li><strong>Information overload:</strong> Users felt overwhelmed by dense charts and competing metrics</li>
+                        <li><strong>Poor hierarchy:</strong> Critical insights were buried alongside secondary data</li>
+                        <li><strong>Limited customization:</strong> Different roles needed different views but the system was rigid</li>
+                        <li><strong>Inconsistent patterns:</strong> Visual language varied across features, creating confusion</li>
+                    </ul>
+                    
+                    <h3>Technical Constraints</h3>
+                    <p>Working within a production environment meant balancing design ambition with practical limitations:</p>
+                    <ul class="styled-list">
+                        <li>Existing React codebase requiring backwards compatibility</li>
+                        <li>Performance requirements for handling large datasets (100k+ feedback entries)</li>
+                        <li>Tight 8-week timeline coinciding with a major product launch</li>
+                        <li>Limited engineering resources for implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Design Process</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Research & Analysis</h3>
+                    <p>I began by conducting a comprehensive audit of the existing system and competitive landscape:</p>
+                    
+                    <div class="process-grid">
+                        <div class="process-item">
+                            <span class="process-number">01</span>
+                            <h4>User Interviews</h4>
+                            <p>Spoke with 12 customers across different roles (analysts, managers, executives) to understand their workflows</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">02</span>
+                            <h4>Competitive Analysis</h4>
+                            <p>Analyzed enterprise analytics platforms (Tableau, Looker, Amplitude) for patterns and best practices</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">03</span>
+                            <h4>Data Audit</h4>
+                            <p>Reviewed actual customer data to understand scale, complexity, and edge cases</p>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-number">04</span>
+                            <h4>Technical Review</h4>
+                            <p>Collaborated with engineers to understand system architecture and constraints</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Key Insights</h3>
+                    <p>Research revealed that different user personas had fundamentally different needs:</p>
+                    <ul class="styled-list">
+                        <li><strong>Executives</strong> wanted high-level trends and anomalies at a glance</li>
+                        <li><strong>Product Managers</strong> needed to drill into specific features and time periods</li>
+                        <li><strong>Analysts</strong> required granular filtering and export capabilities</li>
+                        <li><strong>Support Teams</strong> prioritized real-time alerts and quick issue identification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Design Solution</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Information Architecture</h3>
+                    <p>I restructured the dashboard around a progressive disclosure model, prioritizing the most critical information while maintaining access to detail:</p>
+                    
+                    <ul class="styled-list">
+                        <li><strong>Summary cards</strong> showing KPIs and trends in a scannable format</li>
+                        <li><strong>Sentiment visualization</strong> using color-coded sentiment analysis</li>
+                        <li><strong>Topic clusters</strong> automatically grouping similar feedback themes</li>
+                        <li><strong>Drill-down panels</strong> allowing users to explore specific segments</li>
+                    </ul>
+                    
+                    <h3>Visual Design System</h3>
+                    <p>Working closely with the lead designer, I developed a comprehensive component library addressing the consistency issues:</p>
+                    
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h4>Color System</h4>
+                            <p>Semantic color palette: positive (green), negative (red), neutral (gray), with accessible contrast ratios</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Typography</h4>
+                            <p>Clear hierarchy using font weight and size, optimized for dense data displays</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Data Visualization</h4>
+                            <p>Standardized chart types with consistent styling, tooltips, and interactions</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Components</h4>
+                            <p>Reusable UI elements: cards, filters, tables, modals—all documented in Figma</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Interaction Design</h3>
+                    <p>Key interaction patterns focused on efficiency and discoverability:</p>
+                    <ul class="styled-list">
+                        <li><strong>Smart defaults:</strong> Dashboard auto-configures based on user role</li>
+                        <li><strong>Contextual filtering:</strong> Click any metric to filter the entire view</li>
+                        <li><strong>Saved views:</strong> Users can save and share custom configurations</li>
+                        <li><strong>Keyboard shortcuts:</strong> Power users can navigate efficiently without mouse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Grid -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Design Artifacts</h2>
+            </div>
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-purple">Dashboard Overview</div>
+                    <p class="visual-caption">Main dashboard showing summary metrics and trends</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-purple">Sentiment Analysis</div>
+                    <p class="visual-caption">Color-coded sentiment visualization with filtering</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-purple">Component Library</div>
+                    <p class="visual-caption">Design system components documented in Figma</p>
+                </div>
+                <div class="visual-item">
+                    <div class="visual-placeholder gradient-purple">Mobile Responsive</div>
+                    <p class="visual-caption">Responsive layouts for tablet and mobile viewing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Implementation & Collaboration</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Working with Engineering</h3>
+                    <p>Close collaboration with the development team was crucial to success. I learned to:</p>
+                    <ul class="styled-list">
+                        <li>Document designs with detailed specs and interactive prototypes</li>
+                        <li>Participate in sprint planning and story sizing</li>
+                        <li>Conduct QA reviews and provide implementation feedback</li>
+                        <li>Make pragmatic trade-offs when technical constraints arose</li>
+                    </ul>
+                    
+                    <h3>Stakeholder Management</h3>
+                    <p>Regular communication with leadership ensured alignment:</p>
+                    <ul class="styled-list">
+                        <li>Weekly design reviews with CEO and product leadership</li>
+                        <li>User testing sessions with select enterprise customers</li>
+                        <li>Iterative refinement based on feedback and usage data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="section-header-small">
+                <h2>Outcomes & Impact</h2>
+            </div>
+            <div class="section-content">
+                <div class="content-main">
+                    <h3>Measurable Results</h3>
+                    <p>Post-launch metrics demonstrated significant improvements:</p>
+                    <ul class="styled-list">
+                        <li><strong>42% reduction</strong> in average time to locate specific insights</li>
+                        <li><strong>67% increase</strong> in daily active users engaging with dashboard</li>
+                        <li><strong>Net Promoter Score</strong> improved from 32 to 58 among enterprise customers</li>
+                        <li><strong>Support tickets</strong> related to UI confusion decreased by 51%</li>
+                    </ul>
+                    
+                    <h3>Learnings</h3>
+                    <p><strong>Embrace constraints:</strong> Working within tight timelines and technical limitations forced me to prioritize ruthlessly. I learned that perfect is the enemy of shipped, and that incremental improvements often matter more than revolutionary redesigns.</p>
+                    
+                    <p><strong>Design for scale:</strong> Enterprise products need to handle edge cases and diverse user needs. The component system we built ensured consistency as new features were added, proving that systematic thinking pays dividends.</p>
+                    
+                    <p><strong>Communication is design:</strong> As much time went into explaining decisions as making them. Learning to articulate rationale to engineers, executives, and customers was as important as the visual design itself.</p>
+                    
+                    <h3>What's Next</h3>
+                    <p>The dashboard continues to evolve post-internship. The team is now working on AI-powered insight recommendations and advanced customization features—all built on the foundation of the design system we established.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="case-nav">
+        <div class="case-nav-wrapper">
+            <a href="faith-hill.html" class="case-nav-link">
+                <span class="nav-label">Next Project</span>
+                <span class="nav-title">Faith Hill Community Analysis</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </a>
+            <a href="index.html#work" class="case-nav-link-center">All Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <p class="footer-copyright">© 2024 Dev Srivastava</p>
+                <p class="footer-location">New York, NY</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

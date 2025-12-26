@@ -694,10 +694,9 @@
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 var(--gutter);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: calc(var(--spacing) * 6);
+    display: block;
 }
+
 
 .process-large {
     aspect-ratio: 16/10;
@@ -934,4 +933,36 @@
         gap: calc(var(--spacing) * 6);
         align-items: flex-start;
     }
+}
+
+/* Fix: any fixed side buttons / floating anchors should not wrap per-letter */
+a, .image-placeholder {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* If you have a fixed right-side nav container, it’s likely using one of these classes.
+   This targets most common patterns without needing your exact class name. */
+[class*="jump"], 
+[class*="toc"], 
+[class*="float"], 
+[class*="side"] {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* And force the actual links/buttons in that right-side UI to behave like pills */
+[class*="jump"] a,
+[class*="toc"] a,
+[class*="float"] a,
+[class*="side"] a {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  min-width: 140px;
+  width: auto;
+  padding: 12px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

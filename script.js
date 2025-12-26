@@ -228,3 +228,29 @@ if (heroScroll) {
 if (heroScroll) {
     heroScroll.style.transition = 'opacity 0.3s ease';
 }
+// Case study scroll navigation
+const scrollNavItems = document.querySelectorAll('.scroll-nav__item');
+const scrollSections = ['overview', 'research', 'hierarchy', 'walkthrough', 'impact', 'reflection']
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+
+if (scrollNavItems.length && scrollSections.length) {
+  const setActive = (id) => {
+    scrollNavItems.forEach(item => {
+      item.classList.toggle(
+        'is-active',
+        item.getAttribute('href') === `#${id}`
+      );
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, {
+    threshold: 0.55
+  });
+
+  scrollSections.forEach(section => observer.observe(section));
+}

@@ -1174,4 +1174,74 @@ a, .image-placeholder {
   border: 1px solid var(--gray-200);
   background: #000;
 }
+/* ---------- Case Study Scroll Nav ---------- */
+.scroll-nav {
+  position: fixed;
+  right: 28px;
+
+  /* ✅ move it under the header instead of centering */
+  top: 140px;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  z-index: 999;
+}
+
+.scroll-nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+
+  white-space: nowrap;
+  word-break: keep-all;
+
+opacity: 0.65;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-nav__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--gray-300);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.scroll-nav__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.scroll-nav__item:hover {
+  opacity: 0.85;
+  transform: translateX(-2px);
+}
+
+.scroll-nav__item.is-active {
+  opacity: 1;
+}
+
+.scroll-nav__item.is-active .scroll-nav__dot {
+  background: var(--black);
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.08);
+}
+
+.scroll-nav__item.is-active .scroll-nav__label {
+  color: var(--black);
+}
+
+/* Hide on mobile */
+@media (max-width: 1024px) {
+  .scroll-nav {
+    display: none;
+  }
+}
+section {
+  scroll-margin-top: 120px;
+}
 

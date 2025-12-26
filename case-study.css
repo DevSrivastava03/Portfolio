@@ -1,6 +1,15 @@
 /* Case Study Specific Styles - Ultra Stable */
 
 /* Navigation Modifications */
+.case-title, .journey-title {
+  text-rendering: geometricPrecision;
+}
+.case-subtitle, .journey-subtitle, .journey-step-body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 .nav-back {
     display: inline-flex;
     align-items: center;
@@ -214,6 +223,12 @@
     position: absolute;
     left: 0;
     color: var(--gray-400);
+}
+.featured-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px; /* optional but looks premium */
 }
 
 .content-aside {
@@ -966,3 +981,197 @@ a, .image-placeholder {
   align-items: center;
   justify-content: center;
 }
+/* =========================
+   Journey (Typography-led)
+   ========================= */
+
+.journey--type {
+  padding: clamp(64px, 7vw, 120px) 0;
+}
+
+.journey--type .journey-wrapper {
+  width: min(1060px, 92vw);
+  margin: 0 auto;
+}
+
+.journey--type .journey-head {
+  margin-bottom: clamp(26px, 4vw, 54px);
+}
+
+.journey--type .journey-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 12px;
+}
+.journey--type .journey-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+  color: var(--black);
+}
+
+
+
+.journey--type .journey-subtitle {
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.75;
+  opacity: 0.85;
+  max-width: 78ch;
+}
+
+.journey--type .journey-subtitle strong {
+  font-weight: 650;
+  opacity: 1;
+}
+
+.journey--type .journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2.6vw, 30px);
+  margin-top: clamp(18px, 2.6vw, 30px);
+}
+
+.journey--type .journey-step {
+  padding: clamp(18px, 2.8vw, 28px);
+  border-radius: 22px;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  position: relative;
+  overflow: hidden;
+}
+.journey--type .journey-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--gray-100);
+}
+.journey-step-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.journey-step-chip {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--black);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+}
+
+.journey-step-line {
+  height: 1px;
+  flex: 1;
+  background: var(--gray-200);
+}
+
+.journey--type .journey-step-title {
+  font-size: clamp(18px, 1.9vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+
+.journey--type .journey-step-body {
+  font-size: 15.5px;
+  line-height: 1.75;
+  opacity: 0.88;
+  max-width: 78ch;
+}
+
+.journey--type .journey-step-body strong {
+  font-weight: 650;
+  opacity: 1;
+}
+
+.journey--type .journey-footnote {
+  margin-top: clamp(18px, 2.6vw, 28px);
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+  max-width: 85ch;
+}
+.phone-video {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;   /* 🔴 THIS is the key */
+  margin: 0 auto;
+
+  border-radius: 24px;
+  border: 1px solid var(--gray-200);
+  background: #000; /* optional, helps letterboxing feel intentional */
+}
+
+
+/* Visual hierarchy study emphasis */
+/* Grid media baseline */
+.grid-video,
+.grid-image-static {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--gray-200);
+  background: #000;
+}
+
+/* Make one item span both columns (perfect for vertical phone video) */
+.grid-item--full {
+  grid-column: 1 / -1;
+}
+
+/* Wide videos (charts) */
+.video--wide {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Tall videos (phone) */
+.video--tall {
+  width: min(420px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;     /* critical: don’t crop */
+  background: #000;        /* makes letterboxing feel intentional */
+}
+/* Stack media + caption vertically */
+.media-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers caption under video */
+  gap: 14px;
+}
+
+/* Caption should behave like text, not overlay */
+.grid-caption {
+  position: static;      /* 🔴 critical */
+  max-width: 60ch;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.side-image video {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  background: #000;
+}
+

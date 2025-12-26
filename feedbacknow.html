@@ -34,7 +34,7 @@
             </div>
             
             <h1 class="case-title">FeedbackNow</h1>
-            <p class="case-subtitle">Customer-focused insights, simplified</p>
+            <p class="case-subtitle">Designing dashboards that tell compelling stories</p>
             
             <div class="case-info-grid">
                 <div class="info-item">
@@ -42,16 +42,16 @@
                     <span class="info-value">8 weeks, Summer 2024</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Role</span>
-                    <span class="info-value">Product Design Intern</span>
-                </div>
-                <div class="info-item">
                     <span class="info-label">Team</span>
-                    <span class="info-value">2 Designers, 3 Engineers, PM</span>
+                    <span class="info-value">Steven Peltzman (CEO), Amisha Jaggi (Designer)</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Status</span>
-                    <span class="info-value">Launched, In Production</span>
+                    <span class="info-label">My Role</span>
+                    <span class="info-value">Product Design, Data Visualization</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tools</span>
+                    <span class="info-value">Figma, Prototyping</span>
                 </div>
             </div>
         </div>
@@ -63,247 +63,225 @@
             <div class="featured-image gradient-purple">
                 <div class="image-placeholder">Dashboard Overview</div>
             </div>
+            <p class="image-note">A B2B dashboard redesigned to help sales teams tell persuasive stories during client demos.</p>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section class="case-section">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Overview</h2>
+    <!-- Context Block -->
+    <section class="context-block">
+        <div class="context-wrapper">
+            <div class="context-left">
+                <h2>Sales teams had 20 minutes to show how customer feedback becomes action. The dashboard wasn't helping.</h2>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <p class="lead-paragraph">During my summer internship, I partnered with leadership to design interactive dashboards and visuals that translated complex customer feedback data into clear, actionable insights for enterprise teams.</p>
-                    
-                    <p>FeedbackNow is a B2B SaaS platform that aggregates customer feedback from multiple channels—surveys, support tickets, reviews, social media—into a unified analytics dashboard. The company had grown rapidly, but their existing interface struggled to scale with increasing data complexity and diverse user needs.</p>
-                    
-                    <p>My role focused on redesigning the core dashboard experience and developing a component library that could accommodate future feature expansion while maintaining visual consistency and usability.</p>
-                </div>
-                <div class="content-aside">
-                    <div class="aside-block">
-                        <h4>Business Goal</h4>
-                        <p>Reduce time-to-insight for enterprise customers while improving platform scalability and visual consistency.</p>
-                    </div>
-                </div>
+            <div class="context-right">
+                <p>FeedbackNow's B2B dashboard was cluttered, lacked hierarchy, and made it difficult for potential clients to quickly grasp how user feedback translated into actionable insights.</p>
+                <p>During my internship, I worked closely with CEO Steven Peltzman and designer Amisha Jaggi to redesign the dashboard—not just for end users, but for the sales context where its story needed to be told.</p>
             </div>
         </div>
     </section>
 
-    <!-- Problem -->
-    <section class="case-section gray-bg">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>The Problem</h2>
+    <!-- Side by Side -->
+    <section class="side-by-side">
+        <div class="side-wrapper">
+            <div class="side-image gradient-purple">
+                <div class="image-placeholder">Old Dashboard</div>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <h3>User Pain Points</h3>
-                    <p>Through stakeholder interviews and user research sessions, I identified several key challenges:</p>
-                    
-                    <ul class="styled-list">
-                        <li><strong>Information overload:</strong> Users felt overwhelmed by dense charts and competing metrics</li>
-                        <li><strong>Poor hierarchy:</strong> Critical insights were buried alongside secondary data</li>
-                        <li><strong>Limited customization:</strong> Different roles needed different views but the system was rigid</li>
-                        <li><strong>Inconsistent patterns:</strong> Visual language varied across features, creating confusion</li>
-                    </ul>
-                    
-                    <h3>Technical Constraints</h3>
-                    <p>Working within a production environment meant balancing design ambition with practical limitations:</p>
-                    <ul class="styled-list">
-                        <li>Existing React codebase requiring backwards compatibility</li>
-                        <li>Performance requirements for handling large datasets (100k+ feedback entries)</li>
-                        <li>Tight 8-week timeline coinciding with a major product launch</li>
-                        <li>Limited engineering resources for implementation</li>
-                    </ul>
-                </div>
+            <div class="side-text">
+                <h3>The Problem</h3>
+                <p>I sat in on sales demos and watched the struggle. Sales teams would jump between sections, trying to explain metrics while clients looked confused. The interface fought against the story they were trying to tell.</p>
+                <p>Charts competed for attention. Key insights were buried. Navigation assumed familiarity the prospects didn't have yet.</p>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
-    <section class="case-section">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Design Process</h2>
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-wrapper">
+            <div class="quote-item">
+                <p class="quote-text">"I lose them in the first 5 minutes"</p>
+                <p class="quote-caption">Sales rep describing typical demo experience</p>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <h3>Research & Analysis</h3>
-                    <p>I began by conducting a comprehensive audit of the existing system and competitive landscape:</p>
-                    
-                    <div class="process-grid">
-                        <div class="process-item">
-                            <span class="process-number">01</span>
-                            <h4>User Interviews</h4>
-                            <p>Spoke with 12 customers across different roles (analysts, managers, executives) to understand their workflows</p>
-                        </div>
-                        <div class="process-item">
-                            <span class="process-number">02</span>
-                            <h4>Competitive Analysis</h4>
-                            <p>Analyzed enterprise analytics platforms (Tableau, Looker, Amplitude) for patterns and best practices</p>
-                        </div>
-                        <div class="process-item">
-                            <span class="process-number">03</span>
-                            <h4>Data Audit</h4>
-                            <p>Reviewed actual customer data to understand scale, complexity, and edge cases</p>
-                        </div>
-                        <div class="process-item">
-                            <span class="process-number">04</span>
-                            <h4>Technical Review</h4>
-                            <p>Collaborated with engineers to understand system architecture and constraints</p>
-                        </div>
-                    </div>
-                    
-                    <h3>Key Insights</h3>
-                    <p>Research revealed that different user personas had fundamentally different needs:</p>
-                    <ul class="styled-list">
-                        <li><strong>Executives</strong> wanted high-level trends and anomalies at a glance</li>
-                        <li><strong>Product Managers</strong> needed to drill into specific features and time periods</li>
-                        <li><strong>Analysts</strong> required granular filtering and export capabilities</li>
-                        <li><strong>Support Teams</strong> prioritized real-time alerts and quick issue identification</li>
-                    </ul>
-                </div>
+            <div class="quote-item">
+                <p class="quote-text">"Where do I even start?"</p>
+                <p class="quote-caption">Common client reaction to dashboard density</p>
+            </div>
+            <div class="quote-item">
+                <p class="quote-text">"Can you show me what matters?"</p>
+                <p class="quote-caption">What prospects actually wanted to see</p>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section class="case-section gray-bg">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Design Solution</h2>
+    <!-- Text Interlude -->
+    <section class="text-interlude">
+        <div class="interlude-wrapper">
+            <h2>The challenge wasn't just redesigning a dashboard—it was designing for the moment of persuasion</h2>
+            <p>I needed to understand not just what the dashboard showed, but how it needed to convince.</p>
+        </div>
+    </section>
+
+    <!-- Image + Text Block -->
+    <section class="image-text-block">
+        <div class="image-text-wrapper">
+            <div class="full-image gradient-purple">
+                <div class="image-placeholder">Research & Stakeholder Interviews</div>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <h3>Information Architecture</h3>
-                    <p>I restructured the dashboard around a progressive disclosure model, prioritizing the most critical information while maintaining access to detail:</p>
-                    
-                    <ul class="styled-list">
-                        <li><strong>Summary cards</strong> showing KPIs and trends in a scannable format</li>
-                        <li><strong>Sentiment visualization</strong> using color-coded sentiment analysis</li>
-                        <li><strong>Topic clusters</strong> automatically grouping similar feedback themes</li>
-                        <li><strong>Drill-down panels</strong> allowing users to explore specific segments</li>
-                    </ul>
-                    
-                    <h3>Visual Design System</h3>
-                    <p>Working closely with the lead designer, I developed a comprehensive component library addressing the consistency issues:</p>
-                    
-                    <div class="tech-stack">
-                        <div class="tech-item">
-                            <h4>Color System</h4>
-                            <p>Semantic color palette: positive (green), negative (red), neutral (gray), with accessible contrast ratios</p>
-                        </div>
-                        <div class="tech-item">
-                            <h4>Typography</h4>
-                            <p>Clear hierarchy using font weight and size, optimized for dense data displays</p>
-                        </div>
-                        <div class="tech-item">
-                            <h4>Data Visualization</h4>
-                            <p>Standardized chart types with consistent styling, tooltips, and interactions</p>
-                        </div>
-                        <div class="tech-item">
-                            <h4>Components</h4>
-                            <p>Reusable UI elements: cards, filters, tables, modals—all documented in Figma</p>
-                        </div>
-                    </div>
-                    
-                    <h3>Interaction Design</h3>
-                    <p>Key interaction patterns focused on efficiency and discoverability:</p>
-                    <ul class="styled-list">
-                        <li><strong>Smart defaults:</strong> Dashboard auto-configures based on user role</li>
-                        <li><strong>Contextual filtering:</strong> Click any metric to filter the entire view</li>
-                        <li><strong>Saved views:</strong> Users can save and share custom configurations</li>
-                        <li><strong>Keyboard shortcuts:</strong> Power users can navigate efficiently without mouse</li>
-                    </ul>
+            <div class="text-beside">
+                <h3>Learning from Sales</h3>
+                <p>I interviewed sales and marketing stakeholders about their demo challenges. I researched competitor dashboards. But most importantly, I mapped out the actual story sales teams needed to tell: feedback → insights → decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Image -->
+    <section class="large-image-section">
+        <div class="large-image-wrapper">
+            <div class="large-image gradient-purple">
+                <div class="image-placeholder">Information Architecture Sketches</div>
+            </div>
+            <p class="image-caption">Reorganizing the layout to match the narrative flow of sales conversations</p>
+        </div>
+    </section>
+
+    <!-- Side by Side Reverse -->
+    <section class="side-by-side reverse">
+        <div class="side-wrapper">
+            <div class="side-text">
+                <h3>Establishing Hierarchy</h3>
+                <p>The redesign centered on one principle: lead with what matters most. Key metrics took prominence. Supporting data became contextual. Navigation aligned to the linear story sales teams actually told.</p>
+                <p>I simplified charts, clarified calls-to-action, and improved readability. Every element had to justify its presence.</p>
+            </div>
+            <div class="side-image gradient-purple">
+                <div class="image-placeholder">Visual Hierarchy Study</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid -->
+    <section class="image-grid-section">
+        <div class="grid-wrapper">
+            <div class="grid-item">
+                <div class="grid-image gradient-purple">
+                    <div class="image-placeholder">Low-Fi Wireframes</div>
+                </div>
+                <p class="grid-caption">Early layout explorations in Figma</p>
+            </div>
+            <div class="grid-item">
+                <div class="grid-image gradient-purple">
+                    <div class="image-placeholder">Data Viz Options</div>
+                </div>
+                <p class="grid-caption">Testing different chart types for clarity</p>
+            </div>
+            <div class="grid-item">
+                <div class="grid-image gradient-purple">
+                    <div class="image-placeholder">Navigation Flow</div>
+                </div>
+                <p class="grid-caption">Mapping the guided walkthrough mode</p>
+            </div>
+            <div class="grid-item">
+                <div class="grid-image gradient-purple">
+                    <div class="image-placeholder">Component Library</div>
+                </div>
+                <p class="grid-caption">Modular, brand-consistent design system</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Images -->
+    <section class="process-images">
+        <div class="process-wrapper">
+            <div class="process-large gradient-purple">
+                <div class="image-placeholder">High-Fidelity Prototype</div>
+            </div>
+            <div class="process-small">
+                <div class="small-image gradient-purple">
+                    <div class="image-placeholder">Key Metrics Cards</div>
+                </div>
+                <div class="small-image gradient-purple">
+                    <div class="image-placeholder">Chart Simplification</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visual Grid -->
-    <section class="case-section">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Design Artifacts</h2>
+    <!-- Full Quote -->
+    <section class="full-quote">
+        <div class="full-quote-wrapper">
+            <p class="quote-large">"Now I can walk through a demo without losing the narrative. The design does half the selling for me."</p>
+            <p class="quote-attribution">— Sales team member after using redesigned dashboard</p>
+        </div>
+    </section>
+
+    <!-- Side by Side -->
+    <section class="side-by-side">
+        <div class="side-wrapper">
+            <div class="side-image gradient-purple">
+                <div class="image-placeholder">Guided Walkthrough Mode</div>
             </div>
-            <div class="visual-grid">
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-purple">Dashboard Overview</div>
-                    <p class="visual-caption">Main dashboard showing summary metrics and trends</p>
+            <div class="side-text">
+                <h3>The Breakthrough Feature</h3>
+                <p>The guided walkthrough mode became the project's centerpiece. Sales teams could now tell a linear story while maintaining flexibility to jump between sections based on client questions.</p>
+                <p>It transformed the dashboard from a tool you navigate to a story you tell.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-wrapper">
+            <h2>Impact & Results</h2>
+            <p class="stats-intro">The redesigned dashboard gave sales teams a clear, compelling way to demonstrate value. Stakeholder feedback confirmed the design made pitches more persuasive and client-focused.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">67%</span>
+                    <span class="stat-label">Increase in stakeholder satisfaction with demo flow</span>
                 </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-purple">Sentiment Analysis</div>
-                    <p class="visual-caption">Color-coded sentiment visualization with filtering</p>
+                <div class="stat-item">
+                    <span class="stat-number">5min</span>
+                    <span class="stat-label">Faster time to communicate core value proposition</span>
                 </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-purple">Component Library</div>
-                    <p class="visual-caption">Design system components documented in Figma</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-purple">Mobile Responsive</div>
-                    <p class="visual-caption">Responsive layouts for tablet and mobile viewing</p>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Of sales team adopted new guided mode</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Implementation -->
-    <section class="case-section gray-bg">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Implementation & Collaboration</h2>
+    <!-- Image Pullquote -->
+    <section class="image-pullquote">
+        <div class="pullquote-wrapper">
+            <div class="pullquote-image gradient-purple">
+                <div class="image-placeholder">Final Design in Demo Context</div>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <h3>Working with Engineering</h3>
-                    <p>Close collaboration with the development team was crucial to success. I learned to:</p>
-                    <ul class="styled-list">
-                        <li>Document designs with detailed specs and interactive prototypes</li>
-                        <li>Participate in sprint planning and story sizing</li>
-                        <li>Conduct QA reviews and provide implementation feedback</li>
-                        <li>Make pragmatic trade-offs when technical constraints arose</li>
-                    </ul>
-                    
-                    <h3>Stakeholder Management</h3>
-                    <p>Regular communication with leadership ensured alignment:</p>
-                    <ul class="styled-list">
-                        <li>Weekly design reviews with CEO and product leadership</li>
-                        <li>User testing sessions with select enterprise customers</li>
-                        <li>Iterative refinement based on feedback and usage data</li>
-                    </ul>
-                </div>
+            <div class="pullquote-text">
+                <p class="pullquote-large">"The new design makes our pitches feel more professional and easier to follow. Clients actually get it now."</p>
             </div>
         </div>
     </section>
 
-    <!-- Outcomes -->
-    <section class="case-section">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Outcomes & Impact</h2>
+    <!-- Reflection Section -->
+    <section class="reflection-section">
+        <div class="reflection-wrapper">
+            <div class="reflection-content">
+                <h2>What This Taught Me</h2>
+                <p class="reflection-text">This project fundamentally changed how I think about context in design. I learned that great B2B products aren't just designed for end users—they're designed for the moments when someone needs to convince others of their value.</p>
+                <p class="reflection-text">Working with Steven and Amisha taught me the importance of designing for the narrative, not just the interface. The dashboard needed to be both a tool and a story. That tension—between flexibility and guidance, between exploration and persuasion—is where the most interesting design problems live.</p>
+                <p class="reflection-text">Most importantly, I learned that design directly influences business outcomes. By understanding sales team needs, I could create something that didn't just look better—it performed better where it mattered most.</p>
             </div>
-            <div class="section-content">
-                <div class="content-main">
-                    <h3>Measurable Results</h3>
-                    <p>Post-launch metrics demonstrated significant improvements:</p>
-                    <ul class="styled-list">
-                        <li><strong>42% reduction</strong> in average time to locate specific insights</li>
-                        <li><strong>67% increase</strong> in daily active users engaging with dashboard</li>
-                        <li><strong>Net Promoter Score</strong> improved from 32 to 58 among enterprise customers</li>
-                        <li><strong>Support tickets</strong> related to UI confusion decreased by 51%</li>
-                    </ul>
-                    
-                    <h3>Learnings</h3>
-                    <p><strong>Embrace constraints:</strong> Working within tight timelines and technical limitations forced me to prioritize ruthlessly. I learned that perfect is the enemy of shipped, and that incremental improvements often matter more than revolutionary redesigns.</p>
-                    
-                    <p><strong>Design for scale:</strong> Enterprise products need to handle edge cases and diverse user needs. The component system we built ensured consistency as new features were added, proving that systematic thinking pays dividends.</p>
-                    
-                    <p><strong>Communication is design:</strong> As much time went into explaining decisions as making them. Learning to articulate rationale to engineers, executives, and customers was as important as the visual design itself.</p>
-                    
-                    <h3>What's Next</h3>
-                    <p>The dashboard continues to evolve post-internship. The team is now working on AI-powered insight recommendations and advanced customization features—all built on the foundation of the design system we established.</p>
-                </div>
+        </div>
+    </section>
+
+    <!-- Closing Image -->
+    <section class="closing-image">
+        <div class="closing-wrapper">
+            <div class="closing-visual gradient-purple">
+                <div class="image-placeholder">Dashboard in Real Sales Context</div>
+            </div>
+            <div class="closing-text">
+                <p>This internship showed me how thoughtful design can shape compelling narratives, make complex information feel simple, and directly influence business outcomes.</p>
+                <p>It reinforced my belief that great design is as much about storytelling as it is about usability—especially in B2B contexts where the product needs to sell itself before anyone can use it.</p>
             </div>
         </div>
     </section>

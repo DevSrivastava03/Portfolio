@@ -58,14 +58,22 @@
     </section>
 
     <!-- Featured Image -->
-    <section class="case-featured">
-        <div class="case-featured-wrapper">
-            <div class="featured-image gradient-blue">
-                <div class="image-placeholder">Main Interface</div>
-            </div>
-            <p class="image-note">A gentle companion that invites you to breathe, reflect, and feel — not just respond.</p>
-        </div>
-    </section>
+ <section class="case-featured">
+  <div class="case-featured-wrapper">
+    <div class="featured-media">
+      <video
+        src="TherapyBeagle/Video.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        class="featured-img"
+      ></video>
+    </div>
+    <p class="image-note">Prototype demo: local-first conversations with intentional pacing.</p>
+  </div>
+</section>
+
+
 
     <!-- Context Block -->
     <section class="context-block">
@@ -81,17 +89,18 @@
     </section>
 
     <!-- Image + Text Block -->
-    <section class="image-text-block">
-        <div class="image-text-wrapper">
-            <div class="full-image gradient-blue">
-                <div class="image-placeholder">User Research Notes</div>
-            </div>
-            <div class="text-beside">
-                <h3>What I Heard</h3>
-                <p>I started conversations with fellow students and creatives. Three patterns emerged:</p>
-            </div>
-        </div>
-    </section>
+    <div class="research-block">
+  <p class="research-kicker">Research signal</p>
+  <h3>People didn’t want therapy. They wanted permission to slow down.</h3>
+
+  <ul class="styled-list">
+    <li><strong>Transactional:</strong> check-ins felt like tasks.</li>
+    <li><strong>Untrusted:</strong> nobody knew where vulnerable text went.</li>
+    <li><strong>Rushed:</strong> speed made them self-censor.</li>
+  </ul>
+</div>
+
+
 
     <!-- Quote Grid -->
     <section class="quote-section">
@@ -112,66 +121,97 @@
     </section>
 
     <!-- Side by Side -->
-    <section class="side-by-side">
-        <div class="side-wrapper">
-            <div class="side-image gradient-blue">
-                <div class="image-placeholder">Architecture Diagram</div>
-            </div>
-            <div class="side-text">
-                <h3>Built for Privacy</h3>
-                <p>Everything runs locally using LLaMA 3 through Ollama. No cloud servers. No data collection. Your conversations stay on your device.</p>
-                <p>This wasn't just about privacy—it fundamentally changed what the tool could be. Without engagement metrics to optimize, I could design for slowness instead of retention.</p>
-            </div>
-        </div>
-    </section>
+  <section class="case-section">
+  <div class="case-section-wrapper">
+    <div class="privacy">
+      <div class="privacy__main">
+        <p class="privacy__kicker">Principle</p>
+        <h3 class="privacy__title">Built for Privacy</h3>
 
-    <!-- Large Image -->
-    <section class="large-image-section">
-        <div class="large-image-wrapper">
-            <div class="large-image gradient-blue">
-                <div class="image-placeholder">Early Wireframes</div>
-            </div>
-            <p class="image-caption">Exploring how slowness could be designed into the interface flow</p>
+        <p>
+          Everything runs locally using <strong>LLaMA 3</strong> through <strong>Ollama</strong>.
+          No cloud servers. No data collection. Your conversations stay on your device.
+        </p>
+
+        <p>
+          This wasn’t just about privacy. It fundamentally changed what the tool could be.
+          Without engagement metrics to optimize, I could design for <strong>slowness</strong> instead of retention.
+        </p>
+
+        <div class="privacy__chips">
+          <span class="chip">Local-first</span>
+          <span class="chip">Offline-by-default</span>
+          <span class="chip">No analytics</span>
+          <span class="chip">No account</span>
         </div>
-    </section>
+      </div>
+
+      <aside class="privacy__specs">
+        <div class="spec">
+          <span class="spec__label">Runtime</span>
+          <span class="spec__value">On-device model inference</span>
+        </div>
+
+        <div class="spec">
+          <span class="spec__label">Storage</span>
+          <span class="spec__value">No cloud sync • no tracking</span>
+        </div>
+
+        <div class="spec">
+          <span class="spec__label">Incentives</span>
+          <span class="spec__value">Designed for care, not engagement</span>
+        </div>
+
+        <div class="spec spec--accent">
+          <span class="spec__label">Design consequence</span>
+          <span class="spec__value">Slower pacing replaces retention loops</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Text Interlude -->
-    <section class="text-interlude">
-        <div class="interlude-wrapper">
-            <h2>Designing for Emotional Pacing</h2>
-            <p>I sketched interaction patterns that felt more like sitting with a friend than consulting a therapist. Breathing reminders before conversations. Gentle pauses between responses. No urgency to complete any task.</p>
-        </div>
-    </section>
+    <section class="large-image-section">
+  <div class="large-image-wrapper">
+    <img
+      src="TherapyBeagle/welcome.png"
+      alt="Therapy Beagle welcome screen with name entry and anonymous option"
+      class="featured-img"
+      loading="lazy"
+    />
+    <p class="image-caption">The first interaction asks permission, not questions.</p>
+  </div>
+</section>
+
 
     <!-- Image Grid 2x2 -->
-    <section class="image-grid-section">
-        <div class="grid-wrapper">
-            <div class="grid-item">
-                <div class="grid-image gradient-blue">
-                    <div class="image-placeholder">Breathing Animation</div>
-                </div>
-                <p class="grid-caption">Opening moment invites three slow breaths</p>
-            </div>
-            <div class="grid-item">
-                <div class="grid-image gradient-blue">
-                    <div class="image-placeholder">Conversation Flow</div>
-                </div>
-                <p class="grid-caption">Responses come with thoughtful pauses</p>
-            </div>
-            <div class="grid-item">
-                <div class="grid-image gradient-blue">
-                    <div class="image-placeholder">Memory System</div>
-                </div>
-                <p class="grid-caption">Selective recall without surveillance</p>
-            </div>
-            <div class="grid-item">
-                <div class="grid-image gradient-blue">
-                    <div class="image-placeholder">Typography Study</div>
-                </div>
-                <p class="grid-caption">Generous line height, never cramped</p>
-            </div>
-        </div>
-    </section>
+    <section class="large-image-section">
+  <div class="large-image-wrapper">
+    <img src="TherapyBeagle/idle.png" alt="Idle state" class="featured-img" loading="lazy" />
+    <p class="image-caption">A calm “nothing required” state, designed to reduce urgency.</p>
+  </div>
+</section>
+
+<section class="side-by-side">
+  <div class="side-wrapper">
+    <div class="side-image">
+      <img
+        src="TherapyBeagle/therapy2.png"
+        alt="Therapy Beagle active conversation screen showing paced responses"
+        class="featured-img"
+        loading="lazy"
+      />
+    </div>
+    <div class="side-text">
+      <h3>What it feels like</h3>
+      <p>Instead of optimizing for speed, Therapy Beagle introduces pacing: gentle pauses, slower prompts, and space to reflect.</p>
+      <p>The goal is not to “solve” feelings, but to help you stay with them long enough to understand them.</p>
+    </div>
+  </div>
+</section>
 
     <!-- Full Width Quote -->
     <section class="full-quote">
@@ -182,38 +222,196 @@
     </section>
 
     <!-- Side by Side Reverse -->
-    <section class="side-by-side reverse">
-        <div class="side-wrapper">
-            <div class="side-text">
-                <h3>Visual Language of Care</h3>
-                <p>Muted blues and warm grays. Readable typography with generous line height. Subtle breathing motion during pauses. More whitespace than felt necessary—room to think, room to breathe.</p>
-                <p>Every detail was intentional. The visual design couldn't just look calm—it had to embody the slowness I wanted people to feel.</p>
-            </div>
-            <div class="side-image gradient-blue">
-                <div class="image-placeholder">Style Guide</div>
-            </div>
+   <section class="side-by-side reverse care-section">
+  <div class="side-wrapper">
+    <div class="side-text care-text">
+      <p class="care-kicker">Design system</p>
+      <h3>Visual Language of Care</h3>
+      <p class="care-lede">
+        Muted blues and warm grays. Readable typography with generous line height.
+        Subtle breathing motion during pauses. More whitespace than felt necessary.
+      </p>
+      <p>
+        Every detail was intentional. The visual design couldn't just look calm.
+        It had to embody the slowness I wanted people to feel.
+      </p>
+
+      <div class="care-micro">
+        <span class="micro-pill">Low demand UI</span>
+        <span class="micro-pill">Soft hierarchy</span>
+        <span class="micro-pill">Optional motion</span>
+      </div>
+    </div>
+
+    <aside class="care-card">
+      <div class="care-card__header">
+        <span class="care-card__title">Care tokens</span>
+        <span class="care-card__meta">UI guidelines</span>
+      </div>
+
+      <div class="token">
+        <div class="token__head">
+          <span class="token__icon">T</span>
+          <h4>Type</h4>
         </div>
-    </section>
+        <div class="token__rows">
+          <p><strong>Scale:</strong> 16–18px base, generous line-height</p>
+          <p><strong>Rhythm:</strong> short paragraphs, soft hierarchy</p>
+        </div>
+      </div>
+
+      <div class="token">
+        <div class="token__head">
+          <span class="token__icon">C</span>
+          <h4>Color</h4>
+        </div>
+        <div class="token__rows">
+          <p><strong>Primary:</strong> muted blue</p>
+          <p><strong>Neutrals:</strong> warm grays</p>
+          <p><strong>Contrast:</strong> never harsh, always readable</p>
+        </div>
+      </div>
+
+      <div class="token">
+        <div class="token__head">
+          <span class="token__icon">M</span>
+          <h4>Motion</h4>
+        </div>
+        <div class="token__rows">
+          <p><strong>Breath pace:</strong> slow, subtle, optional</p>
+          <p><strong>Pauses:</strong> designed into response timing</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="journey--type">
+  <div class="journey-wrapper">
+
+    <div class="journey-head">
+      <p class="journey-eyebrow">Information Architecture</p>
+      <h2 class="journey-title">Designed for Slowness</h2>
+      <p class="journey-subtitle">
+        Therapy Beagle uses a state-based structure that prioritizes presence,
+        privacy, and permission to disengage.
+      </p>
+    </div>
+
+    <div class="journey-steps">
+
+      <div class="journey-step">
+        <div class="journey-step-top">
+          <span class="journey-step-chip">Arrive</span>
+          <span class="journey-step-line"></span>
+        </div>
+        <p class="journey-step-body">
+          The default state. Nothing is required. Users can simply exist,
+          without prompts or pressure to respond.
+        </p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-top">
+          <span class="journey-step-chip">Stay</span>
+          <span class="journey-step-line"></span>
+        </div>
+        <p class="journey-step-body">
+          Optional conversation with intentional pacing.
+          Silence is allowed. Pauses are visible.
+        </p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-top">
+          <span class="journey-step-chip">Reflect</span>
+          <span class="journey-step-line"></span>
+        </div>
+        <p class="journey-step-body">
+          Private memory without metrics. Moments can be revisited,
+          edited, or deleted at any time.
+        </p>
+      </div>
+
+      <div class="journey-step">
+        <div class="journey-step-top">
+          <span class="journey-step-chip">Leave</span>
+          <span class="journey-step-line"></span>
+        </div>
+        <p class="journey-step-body">
+          Leaving is a designed outcome. No streak loss. No reminders.
+          Returning is optional.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="journey-footnote">
+      Care Settings remain accessible throughout the experience,
+      defining boundaries around privacy, pace, and tone.
+    </p>
+
+  </div>
+</section>
+
 
     <!-- Process Images -->
-    <section class="process-images">
-        <div class="process-wrapper">
-            <div class="process-large gradient-blue">
-                <div class="image-placeholder">High-Fidelity Prototype</div>
-            </div>
-                <div class="small-image gradient-blue">
-                    <div class="image-placeholder">Component Library</div>
-                </div>
-            </div>
-        </div>
-    </section>
+   <section class="case-section gray-bg">
+  <div class="case-section-wrapper">
+    <div class="section-header-small">
+      <h2>Process Timeline</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <span class="process-number">01</span>
+        <h4>Research</h4>
+        <p>Talked with students and creatives about why journaling apps and chatbots felt clinical, rushed, or unsafe.</p>
+      </div>
+
+      <div class="process-item">
+        <span class="process-number">02</span>
+        <h4>Constraint</h4>
+        <p>Committed to local-first privacy and emotional pacing. No engagement loops, no cloud, no “optimize for retention.”</p>
+      </div>
+
+      <div class="process-item">
+        <span class="process-number">03</span>
+        <h4>Prototype</h4>
+        <p>Designed a calm interface with intentional pauses, low-demand UI states, and gentle openings that ask permission.</p>
+      </div>
+
+      <div class="process-item">
+        <span class="process-number">04</span>
+        <h4>Testing</h4>
+        <p>Shared working builds with peers and observed where pacing helped, where it frustrated, and what felt most “safe.”</p>
+      </div>
+
+      <div class="process-item">
+        <span class="process-number">05</span>
+        <h4>Iteration</h4>
+        <p>Refined tone, timing, and layout. Reduced cognitive load and made “no response needed” states feel intentional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Text Block with Stats -->
     <section class="stats-section">
         <div class="stats-wrapper">
             <h2>Learning Through Use</h2>
             <p class="stats-intro">I shared prototypes with fellow students and creatives. The feedback revealed where I'd gotten it wrong—and right.</p>
-            
+         <div class="learned">
+  <p class="learned__kicker">What changed after testing</p>
+  <ul class="learned__list">
+    <li><strong>Pacing matters:</strong> people stayed longer when there was no pressure to “perform” emotions.</li>
+    <li><strong>Privacy increased honesty:</strong> local-first made sharing feel safer.</li>
+    <li><strong>Silence is a feature:</strong> the idle state reduced anxiety instead of creating it.</li>
+  </ul>
+</div>
+
+
             <div class="stats-grid">
                 <div class="stat-item">
                     <span class="stat-number">15</span>
@@ -232,40 +430,47 @@
     </section>
 
     <!-- Image + Pullquote -->
-    <section class="image-pullquote">
-        <div class="pullquote-wrapper">
-            <div class="pullquote-image gradient-blue">
-                <div class="image-placeholder">Testing Session</div>
-            </div>
-            <div class="pullquote-text">
-                <p class="pullquote-large">"I actually stayed in a conversation longer than usual because it wasn't rushing me to 'insights.'"</p>
-            </div>
-        </div>
-    </section>
+    <section class="case-section">
+  <div class="case-section-wrapper">
+    <p class="quote-text" style="font-size:1.75rem; line-height:1.35; max-width: 900px;">
+      “I actually stayed in the conversation longer because it wasn’t rushing me to insights.”
+    </p>
+    <p style="margin-top:10px; color: var(--gray-500);">— Student tester</p>
+  </div>
+</section>
+
 
     <!-- Final Reflection -->
     <section class="reflection-section">
-        <div class="reflection-wrapper">
-            <div class="reflection-content">
-                <h2>What It Taught Me</h2>
-                <p class="reflection-text">Therapy Beagle taught me that care isn't something you add to a product—it's a foundational constraint that shapes every decision. When you commit to slowness, privacy, and emotional presence, entire categories of features become impossible.</p>
-                <p class="reflection-text">No growth hacking. No viral loops. No data monetization. And that's exactly the point.</p>
-            </div>
-        </div>
-    </section>
+  <div class="reflection-wrapper">
 
-    <!-- Closing Image -->
-    <section class="closing-image">
-        <div class="closing-wrapper">
-            <div class="closing-visual gradient-blue">
-                <div class="image-placeholder">Final Interface in Context</div>
-            </div>
-            <div class="closing-text">
-                <p>Therapy Beagle remains a working prototype and a provocation. It asks: what if more digital tools were built for human flourishing instead of engagement metrics?</p>
-                <p>This project deepened my interest in exploring offline-first, privacy-centered, and emotionally aware approaches to building digital products.</p>
-            </div>
-        </div>
-    </section>
+    <div class="reflection-content">
+      <h2>What This Proved</h2>
+
+      <p class="lead-paragraph">
+        A working local-first prototype that treats <strong>slowness as an interaction pattern</strong>, not a mood.
+      </p>
+
+      <p class="reflection-text">
+        Therapy Beagle demonstrates how care, privacy, and pacing can be designed as system-level constraints rather than surface-level tone.
+        By removing engagement metrics, cloud storage, and urgency-driven feedback loops, the interface creates space for reflection
+        without demanding productivity or emotional performance.
+      </p>
+
+      <p class="reflection-text">
+        If continued, the next phase would focus on longer-term use, configurable pacing, and clearer boundaries around what the system
+        should <em>never</em> do — including moments where silence or non-response is the correct behavior.
+      </p>
+
+      <p class="reflection-text">
+        Therapy Beagle is both a working system and a provocation. It asks:
+        <strong>what if more digital tools were designed for human flourishing instead of engagement metrics?</strong>
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Project Navigation -->
     <section class="case-nav">

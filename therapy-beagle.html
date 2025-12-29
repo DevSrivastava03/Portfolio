@@ -222,137 +222,109 @@
     </section>
 
     <!-- Side by Side Reverse -->
-   <section class="side-by-side reverse care-section">
-  <div class="side-wrapper">
-    <div class="side-text care-text">
-      <p class="care-kicker">Design system</p>
-      <h3>Visual Language of Care</h3>
-      <p class="care-lede">
-        Muted blues and warm grays. Readable typography with generous line height.
-        Subtle breathing motion during pauses. More whitespace than felt necessary.
-      </p>
-      <p>
-        Every detail was intentional. The visual design couldn't just look calm.
-        It had to embody the slowness I wanted people to feel.
-      </p>
-
-      <div class="care-micro">
-        <span class="micro-pill">Low demand UI</span>
-        <span class="micro-pill">Soft hierarchy</span>
-        <span class="micro-pill">Optional motion</span>
-      </div>
+   <aside class="care-system">
+  <!-- TYPE -->
+  <div class="care-mini">
+    <div class="care-mini__head">
+      <span class="care-mini__tag">TYPE</span>
+      <span class="care-mini__hint">16–18px base</span>
     </div>
 
-    <aside class="care-card">
-      <div class="care-card__header">
-        <span class="care-card__title">Care tokens</span>
-        <span class="care-card__meta">UI guidelines</span>
-      </div>
-
-      <div class="token">
-        <div class="token__head">
-          <span class="token__icon">T</span>
-          <h4>Type</h4>
-        </div>
-        <div class="token__rows">
-          <p><strong>Scale:</strong> 16–18px base, generous line-height</p>
-          <p><strong>Rhythm:</strong> short paragraphs, soft hierarchy</p>
-        </div>
-      </div>
-
-      <div class="token">
-        <div class="token__head">
-          <span class="token__icon">C</span>
-          <h4>Color</h4>
-        </div>
-        <div class="token__rows">
-          <p><strong>Primary:</strong> muted blue</p>
-          <p><strong>Neutrals:</strong> warm grays</p>
-          <p><strong>Contrast:</strong> never harsh, always readable</p>
-        </div>
-      </div>
-
-      <div class="token">
-        <div class="token__head">
-          <span class="token__icon">M</span>
-          <h4>Motion</h4>
-        </div>
-        <div class="token__rows">
-          <p><strong>Breath pace:</strong> slow, subtle, optional</p>
-          <p><strong>Pauses:</strong> designed into response timing</p>
-        </div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="journey--type">
-  <div class="journey-wrapper">
-
-    <div class="journey-head">
-      <p class="journey-eyebrow">Information Architecture</p>
-      <h2 class="journey-title">Designed for Slowness</h2>
-      <p class="journey-subtitle">
-        Therapy Beagle uses a state-based structure that prioritizes presence,
-        privacy, and permission to disengage.
-      </p>
-    </div>
-
-    <div class="journey-steps">
-
-      <div class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Arrive</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <p class="journey-step-body">
-          The default state. Nothing is required. Users can simply exist,
-          without prompts or pressure to respond.
-        </p>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Stay</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <p class="journey-step-body">
-          Optional conversation with intentional pacing.
-          Silence is allowed. Pauses are visible.
-        </p>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Reflect</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <p class="journey-step-body">
-          Private memory without metrics. Moments can be revisited,
-          edited, or deleted at any time.
-        </p>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Leave</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <p class="journey-step-body">
-          Leaving is a designed outcome. No streak loss. No reminders.
-          Returning is optional.
-        </p>
-      </div>
-
-    </div>
-
-    <p class="journey-footnote">
-      Care Settings remain accessible throughout the experience,
-      defining boundaries around privacy, pace, and tone.
+    <p class="type-sample-lg">This is a calm thought.</p>
+    <p class="type-sample-sm">
+      Short paragraphs + generous line-height reduce pressure to “perform” emotions.
     </p>
 
+    <div class="care-mini__meta">Soft hierarchy · readable rhythm</div>
+  </div>
+
+  <!-- COLOR -->
+  <div class="care-mini">
+    <div class="care-mini__head">
+      <span class="care-mini__tag">COLOR</span>
+      <span class="care-mini__hint">Muted, warm neutrals</span>
+    </div>
+
+    <div class="swatches">
+      <div class="swatch" data-name="Muted blue"></div>
+      <div class="swatch" data-name="Warm gray"></div>
+      <div class="swatch" data-name="Soft white"></div>
+      <div class="swatch" data-name="Ink"></div>
+    </div>
+
+    <div class="care-mini__meta">Never harsh · always readable</div>
+  </div>
+
+  <!-- MOTION -->
+  <div class="care-mini">
+    <div class="care-mini__head">
+      <span class="care-mini__tag">MOTION</span>
+      <span class="care-mini__hint">Optional</span>
+    </div>
+
+    <div class="breath-wrap">
+      <div class="breath"></div>
+      <div class="breath-ghost"></div>
+      <p class="breath-label">breath pace · slow</p>
+    </div>
+
+    <div class="care-mini__meta">Pauses are designed into timing</div>
+  </div>
+</aside>
+
+
+<section class="ia-section">
+  <div class="ia-wrap">
+    <div class="ia-kicker">INFORMATION ARCHITECTURE</div>
+    <h2 class="ia-title">Designed for Slowness</h2>
+    <p class="ia-subtitle">
+      A state-based flow that prioritizes presence, privacy, and permission to disengage — with
+      <strong>Care Settings</strong> accessible from anywhere.
+    </p>
+
+    <div class="ia-flow">
+      <div class="ia-card">
+        <div class="ia-tag">ARRIVE</div>
+        <p class="ia-body">Permission, not prompts.</p>
+      </div>
+
+      <div class="ia-connector"><span></span></div>
+
+      <div class="ia-card">
+        <div class="ia-tag">STAY</div>
+        <p class="ia-body">Conversation with pacing. Silence allowed.</p>
+      </div>
+
+      <div class="ia-connector"><span></span></div>
+
+      <div class="ia-card">
+        <div class="ia-tag">REFLECT</div>
+        <p class="ia-body">Private memory — revisit, edit, delete.</p>
+      </div>
+
+      <div class="ia-connector"><span></span></div>
+
+      <div class="ia-card">
+        <div class="ia-tag">LEAVE</div>
+        <p class="ia-body">No guilt. No streak loss. Returning is optional.</p>
+      </div>
+    </div>
+
+    <div class="ia-care">
+      <div class="ia-care-pill">
+        <strong>CARE SETTINGS</strong>
+        <span class="dot"></span> Pace
+        <span class="dot"></span> Privacy
+        <span class="dot"></span> Boundaries
+        <span class="dot"></span> Tone
+      </div>
+    </div>
+
+    <div class="ia-divider"></div>
   </div>
 </section>
+
+
 
 
     <!-- Process Images -->

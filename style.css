@@ -32,6 +32,9 @@
     
     /* Animation */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+     --care-blue: #4B6FAF;
+  --care-blue-soft: rgba(75,111,175,0.18);
+  --care-blue-softer: rgba(75,111,175,0.10);
 }
 
 * {

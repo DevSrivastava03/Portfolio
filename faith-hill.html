@@ -34,12 +34,12 @@
             </div>
             
             <h1 class="case-title">Would Faith Hill Still Be a Hit?</h1>
-            <p class="case-subtitle">Exploring how popular music has evolved in the streaming era</p>
+            <p class="case-subtitle">Exploring how popular music has evolved in the streaming era through data visualization</p>
             
             <div class="case-info-grid">
                 <div class="info-item">
                     <span class="info-label">Timeline</span>
-                    <span class="info-value">10 weeks, Spring 2024</span>
+                    <span class="info-value">10 weeks, Fall 2024</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Role</span>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="info-item">
                     <span class="info-label">Tools</span>
-                    <span class="info-value">JavaScript, D3.js, Python, Spotify API</span>
+                    <span class="info-value">D3.js, Chart.js, Python, Spotify API</span>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
     <section class="case-featured">
         <div class="case-featured-wrapper">
             <div class="featured-image gradient-orange">
-                <div class="image-placeholder">Music Evolution Data Visualization</div>
+                <img src="faith/hero.png" alt="Faith Hill Data Visualization" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </section>
@@ -74,16 +74,22 @@
             </div>
             <div class="section-content">
                 <div class="content-main">
-                    <p class="lead-paragraph">Music tastes evolve, but rarely do we stop to ask how they've changed—or whether yesterday's hits would even chart today. This project started with a simple provocation: Would Faith Hill's "Breathe," a massive hit in 2000, still resonate in 2024's streaming-dominated landscape?</p>
+                    <p class="lead-paragraph">In 2000, Faith Hill's "Breathe" dominated the Billboard Hot 100. But would it still chart in 2024's streaming-first landscape? This project uses 24 years of Billboard data and Spotify audio features to explore how hits have transformed.</p>
                     
-                    <p>To answer that, I analyzed 24 years of Billboard Year-End charts alongside Spotify's audio features, visualizing how tempo, song length, loudness, energy, and danceability have shifted as listening habits moved from radio to playlists. What emerged wasn't just a story about one artist—it was a window into how algorithmic curation, shorter attention spans, and platform economics have fundamentally reshaped what "popular music" sounds like.</p>
+                    <p>I analyzed tempo, length, loudness, energy, and danceability across nearly 2,400 year-end chart entries to understand how listening habits shifted from radio to algorithmic playlists. The result is an interactive narrative that reveals how platform economics and cultural expectations have fundamentally reshaped what "popular music" sounds like.</p>
                     
-                    <p>The project combines data analysis with cultural commentary, designed as an interactive web experience that lets you explore these trends at your own pace. This isn't an academic paper dressed up as a website. It's a designed argument—an invitation to reconsider what we think we know about pop music through the lens of data that reveals patterns we feel but rarely quantify.</p>
+                    <p>This isn't just about one song—it's about interrogating invisible platform logics that shape culture. Every visualization decision, from color to pacing, was designed to make complex data feel personal and culturally relevant.</p>
                 </div>
                 <div class="content-aside">
                     <div class="aside-block">
                         <h4>Project Link</h4>
                         <p><a href="https://devsrivastava03.github.io/Data-viz-final/" target="_blank" style="color: #ff6b35; text-decoration: none;">View Live Project →</a></p>
+                    </div>
+                    <div class="aside-block">
+                        <h4>Key Metrics</h4>
+                        <p><strong>2,400+</strong> songs analyzed<br>
+                        <strong>24 years</strong> of Billboard data<br>
+                        <strong>8</strong> audio features tracked</p>
                     </div>
                 </div>
             </div>
@@ -100,11 +106,11 @@
                 <div class="content-main">
                     <h3>Would Faith Hill's biggest hit still be a hit today?</h3>
                     
-                    <p>It's a question that sits at the intersection of nostalgia, technology, and cultural change. When "Breathe" dominated the charts in 2000, radio airplay was king. Songs had room to build. Ballads could breathe (pun intended). But today's music landscape is fundamentally different: streaming platforms favor quick hooks, algorithmic playlists reward energy and danceability, and listeners skip within seconds if a song doesn't grab them.</p>
+                    <p>When "Breathe" topped the charts in 2000, radio airplay was king. Songs had room to build, ballads could breathe. Today's landscape is fundamentally different: streaming platforms favor quick hooks, algorithms reward energy and danceability, and listeners skip within seconds if a song doesn't grab them immediately.</p>
                     
-                    <p>This isn't just about Faith Hill—it's about what happens when distribution technology changes faster than our listening habits can keep up. By comparing the sonic DNA of early 2000s hits against today's chart-toppers, I wanted to understand whether the music itself has changed, or if we've simply trained ourselves to want something different.</p>
+                    <p>This question sits at the intersection of nostalgia, technology, and cultural change. By comparing the sonic DNA of early 2000s hits against today's chart-toppers, I wanted to understand whether the music itself has changed, or if we've simply trained ourselves to want something different.</p>
                     
-                    <p>The question matters because it reveals how invisible platform logics shape culture in ways we rarely examine. Every time Spotify's algorithm decides what song plays next, every time a producer masters a track to grab attention in the first 15 seconds, every time a songwriter cuts a verse to hit that 3-minute sweet spot—these aren't just creative decisions. They're responses to a technological ecosystem that has redefined what "popular" means.</p>
+                    <p>The question matters because it reveals how invisible platform logics shape culture. Every time Spotify's algorithm decides what plays next, every time a producer masters a track to grab attention in 15 seconds, every time a songwriter hits that 3-minute sweet spot—these aren't just creative decisions. They're responses to a technological ecosystem that has redefined what "popular" means.</p>
                 </div>
             </div>
         </div>
@@ -114,34 +120,34 @@
     <section class="case-section">
         <div class="case-section-wrapper">
             <div class="section-header-small">
-                <h2>Data & Tools</h2>
+                <h2>Data & Methodology</h2>
             </div>
             <div class="section-content">
                 <div class="content-main">
                     <h3>Data Sources</h3>
                     <ul class="styled-list">
-                        <li><strong>Billboard Year-End Hot 100 Charts (2000–2023)</strong> — Tracking which songs defined each year across nearly two and a half decades</li>
-                        <li><strong>Spotify Web API</strong> — Audio features including tempo, energy, danceability, loudness, valence, and duration for each charting song</li>
-                        <li><strong>Manual cross-referencing</strong> — Ensuring data integrity across naming conventions and artist variations between Billboard and Spotify databases</li>
+                        <li><strong>Billboard Year-End Hot 100 (2000–2023)</strong> — 2,400 songs that defined nearly two and a half decades of popular music</li>
+                        <li><strong>Spotify Web API</strong> — Audio features including tempo (BPM), energy, danceability, loudness (dB), valence, acousticness, and duration for each track</li>
+                        <li><strong>Manual verification</strong> — Cross-referenced naming conventions and artist variations between Billboard and Spotify databases to ensure data integrity</li>
                     </ul>
                     
-                    <h3>Technical Stack</h3>
+                    <h3>Technical Approach</h3>
                     <div class="tech-stack">
                         <div class="tech-item">
-                            <h4>JavaScript</h4>
-                            <p>Data processing, interactive visualization logic, and narrative flow control</p>
+                            <h4>Python Data Pipeline</h4>
+                            <p>Used Python and Pandas to scrape Billboard data, authenticate with Spotify API, and merge datasets. Cleaned inconsistencies and standardized formats for 2,400+ tracks.</p>
                         </div>
                         <div class="tech-item">
-                            <h4>HTML/CSS</h4>
-                            <p>Responsive layout and scrolling narrative structure</p>
+                            <h4>D3.js & Chart.js</h4>
+                            <p>Built custom line charts, scatter plots, and radar charts to visualize trends. D3 handled complex data binding while Chart.js provided smooth animations.</p>
                         </div>
                         <div class="tech-item">
-                            <h4>D3.js / Chart.js</h4>
-                            <p>Rendering line charts, comparisons, and trend visualizations</p>
+                            <h4>Narrative Design</h4>
+                            <p>Structured as a scrolling story with progressive disclosure. Each chapter reveals one insight at a time, building toward a comprehensive understanding of musical evolution.</p>
                         </div>
                         <div class="tech-item">
-                            <h4>Python</h4>
-                            <p>Data preparation, cleaning, and standardizing datasets before visualization</p>
+                            <h4>Responsive Layout</h4>
+                            <p>Mobile-first CSS with custom breakpoints. Charts adapt to screen size while maintaining readability and visual hierarchy across devices.</p>
                         </div>
                     </div>
                 </div>
@@ -153,23 +159,21 @@
     <section class="case-section gray-bg">
         <div class="case-section-wrapper">
             <div class="section-header-small">
-                <h2>Design & Interaction Decisions</h2>
+                <h2>Design Philosophy</h2>
             </div>
             <div class="section-content">
                 <div class="content-main">
-                    <p>I wanted the site to feel like you're following a thread of curiosity, not reading a research paper. The layout unfolds gradually—starting with the central question, then revealing data in digestible layers. Each chart is introduced with context before you see the visual, so you understand <em>why</em> the numbers matter, not just <em>what</em> they show.</p>
-                    
                     <h3>Visual Language</h3>
-                    <p>Color choices reflect the tension between eras: warm, nostalgic tones for early 2000s data, cooler, more saturated colors for the streaming era. This visual contrast reinforces the narrative of cultural shift without being heavy-handed about it. The palette had to feel contemporary but not cold—data-driven but not clinical.</p>
+                    <p>I wanted readers to feel like they're following a thread of curiosity, not reading a research paper. The color palette reflects temporal tension: warm nostalgic tones for early 2000s data, cooler saturated colors for the streaming era. This visual contrast reinforces cultural shift without being heavy-handed.</p>
                     
                     <h3>Narrative Pacing</h3>
-                    <p>Pacing matters. Rather than overwhelming visitors with all the data at once, I structured the experience as a scrolling narrative. You encounter one insight at a time—tempo shifts, then song length compression, then loudness normalization—building toward a cumulative understanding of how these changes compound. Each section answers one specific question before moving to the next.</p>
+                    <p>Rather than overwhelming visitors with all data at once, I structured the experience as a scrolling narrative. You encounter one insight at a time—tempo shifts, then song length compression, then loudness normalization—building cumulative understanding. Each section answers one specific question before moving to the next.</p>
                     
                     <h3>Interaction Philosophy</h3>
-                    <p>Interaction is minimal but purposeful. Hovering reveals specific data points, but I avoided overly complex controls. The goal was clarity and narrative flow, not feature bloat. You should be able to skim or deep-dive depending on your interest level. The visualizations are designed to communicate even at a glance, with layered detail available for those who want to dig deeper.</p>
+                    <p>Interaction is minimal but purposeful. Hovering reveals specific data points, but I avoided overly complex controls. The goal was clarity and narrative flow, not feature bloat. Visualizations communicate at a glance, with layered detail for those who want to dig deeper.</p>
                     
                     <h3>Typography & Hierarchy</h3>
-                    <p>Text and visuals needed to work in concert. I used clear typographic hierarchy to guide the eye, with pull quotes and annotations that connect data points to cultural context. The typography had to feel editorial—confident and opinionated—while remaining accessible and readable across devices.</p>
+                    <p>Text and visuals work in concert. Clear typographic hierarchy guides the eye, with pull quotes and annotations connecting data points to cultural context. The typography feels editorial—confident and opinionated—while remaining accessible across devices.</p>
                 </div>
             </div>
         </div>
@@ -179,7 +183,7 @@
     <section class="case-section">
         <div class="case-section-wrapper">
             <div class="section-header-small">
-                <h2>Key Insights</h2>
+                <h2>Key Findings</h2>
             </div>
             <div class="section-content">
                 <div class="content-main">
@@ -188,28 +192,28 @@
                     <div class="process-grid">
                         <div class="process-item">
                             <span class="process-number">01</span>
-                            <h4>Songs Are Getting Shorter—and Faster</h4>
-                            <p>The average hit song in 2000 ran over 4 minutes. By 2023, it's closer to 3:15. Tempo has crept up too, optimizing for playlist energy and gym-friendly beats rather than radio-friendly ballads. This isn't coincidence—it's economics. Streaming platforms pay per-play, incentivizing artists to create more songs that clock in just long enough to count as a stream.</p>
+                            <h4>Tempo Drift Downward</h4>
+                            <p>Average tempo declined from 120+ BPM in the early 2000s to ~115 BPM today. "Breathe" at 136 BPM is significantly faster than modern hits. This shift aligns with streaming's preference for steady mid-tempo music that works as ambient sound during work or commuting.</p>
                         </div>
                         <div class="process-item">
                             <span class="process-number">02</span>
-                            <h4>Loudness Normalization Killed the Dynamics</h4>
-                            <p>Early 2000s hits had dynamic range—quiet verses, explosive choruses. Today's tracks are brick-walled loud from start to finish, engineered to compete in noisy environments and grab attention instantly. Streaming platforms' loudness normalization theoretically levels the playing field, but producers still master hot to stand out in crowded playlists.</p>
+                            <h4>The 3-Minute Rule</h4>
+                            <p>Songs shrank from 4+ minutes in 2000 to ~3:15 by 2023. "Breathe" runs 4:10—outside the modern cluster. Streaming economics incentivize shorter tracks: more songs mean more plays, and listeners skip if hooks don't land immediately. Attention is quantified and monetized per-stream.</p>
                         </div>
                         <div class="process-item">
                             <span class="process-number">03</span>
-                            <h4>Danceability and Energy Are the New Gatekeepers</h4>
-                            <p>Spotify's algorithm favors upbeat, high-energy tracks. Slow burns and emotional crescendos—hallmarks of early 2000s pop—are statistically rarer in today's charts. We've traded catharsis for momentum. The data shows a clear upward trend in both energy and danceability scores, reflecting platforms' preference for music that keeps listeners engaged and active.</p>
+                            <h4>Loudness Normalization's Legacy</h4>
+                            <p>Early 2000s featured dynamic range—quiet verses, explosive choruses. Today's tracks are brick-walled loud (-4 to -5 dB average) despite platform normalization. "Breathe" at -7.2 dB feels spacious by comparison, but that openness reads as dated in today's compressed landscape.</p>
                         </div>
                         <div class="process-item">
                             <span class="process-number">04</span>
-                            <h4>Streaming Metrics Favor Skippability</h4>
-                            <p>Songs now hook you in the first 15 seconds or risk algorithmic punishment. The long intros and narrative structures of 2000s hits would struggle in an environment where attention is quantified and monetized per-stream. This shows up in the data as compressed song structures and front-loaded hooks.</p>
+                            <h4>Energy and Danceability as Gatekeepers</h4>
+                            <p>Modern hits average 0.68 energy and 0.73 danceability. "Breathe" matches energy (0.68) but lags in danceability (0.52). Algorithms favor upbeat, rhythm-forward tracks. Slow burns and emotional crescendos—hallmarks of 2000s pop—are statistically rarer in today's charts.</p>
                         </div>
                         <div class="process-item">
                             <span class="process-number">05</span>
-                            <h4>"Breathe" Wouldn't Breathe Today</h4>
-                            <p>Faith Hill's signature hit—mid-tempo, emotionally patient, structurally generous—would likely be labeled "too slow" by today's playlist curators. It's not that the song is worse; it's that the listening context has fundamentally changed. When you plot "Breathe" against 2023's average hit song, it's an outlier on almost every metric that matters to streaming algorithms.</p>
+                            <h4>"Breathe" Wouldn't Chart Today</h4>
+                            <p>Plotting "Breathe" against 2023 averages reveals it's an outlier on nearly every metric. It's not worse—it's shaped by different listening contexts. A mid-tempo, emotionally patient ballad would likely be labeled "too slow" by today's playlist curators. The verdict: nostalgic rather than contemporary.</p>
                         </div>
                     </div>
                 </div>
@@ -218,59 +222,83 @@
     </section>
 
     <!-- Visual Grid -->
-    <section class="case-section gray-bg">
-        <div class="case-section-wrapper">
-            <div class="section-header-small">
-                <h2>Visual Explorations</h2>
-            </div>
-            <div class="visual-grid">
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-orange">Tempo Over Time</div>
-                    <p class="visual-caption">Line chart showing the gradual acceleration of popular music from 2000-2023</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-orange">Song Length Analysis</div>
-                    <p class="visual-caption">Visualization of the compression of song durations in the streaming era</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-orange">Energy & Danceability</div>
-                    <p class="visual-caption">Scatter plot comparing audio features across decades</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-orange">Faith Hill Comparison</div>
-                    <p class="visual-caption">Radar chart positioning "Breathe" against modern hit averages</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Visual Explorations -->
+<section class="case-section gray-bg" id="visuals">
+  <div class="case-section-wrapper">
+    <div class="section-header-small">
+      <h2>Visual Explorations</h2>
+    </div>
+
+    <div class="charts-grid">
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average Tempo By Decade.png" alt="Average tempo by decade slice chart">
+        <figcaption class="chart-caption">Average tempo by decade slice. A quick macro view of how BPM shifts across eras.</figcaption>
+      </figure>
+
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average Tempo over time.png" alt="Average tempo over time line chart">
+        <figcaption class="chart-caption">Average tempo over time. The highlighted point marks “Breathe” (2000).</figcaption>
+      </figure>
+
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average song length.png" alt="Average song length over time line chart">
+        <figcaption class="chart-caption">Average song length over time. Tracks compress in the streaming era.</figcaption>
+      </figure>
+
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average loudness.png" alt="Average loudness over time line chart">
+        <figcaption class="chart-caption">Average loudness over time. Modern hits sit closer to a louder, more compressed norm.</figcaption>
+      </figure>
+
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average energy and danceability.png" alt="Average energy and danceability line chart">
+        <figcaption class="chart-caption">Energy &amp; danceability. Yearly averages + “Breathe” markers.</figcaption>
+      </figure>
+
+      <figure class="chart-card">
+        <img class="chart-img" src="faith/Average audio features by genre group.png" alt="Average audio features by genre group bar chart">
+        <figcaption class="chart-caption">Genre group comparison. How energy, danceability, and valence cluster by genre.</figcaption>
+      </figure>
+
+      <figure class="chart-card chart-card--wide">
+        <img class="chart-img" src="faith/Musical structure comparison.png" alt="Musical structure comparison chart">
+        <figcaption class="chart-caption">Musical structure comparison. “Breathe” vs an average 2020s hit (normalized).</figcaption>
+      </figure>
+
+      <figure class="chart-card chart-card--wide">
+        <img class="chart-img" src="faith/Emotional and production profile.png" alt="Emotional and production profile comparison chart">
+        <figcaption class="chart-caption">Emotional + production profile. “Breathe” vs recent hits across key features.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 
     <!-- Reflection -->
     <section class="case-section">
         <div class="case-section-wrapper">
             <div class="section-header-small">
-                <h2>Reflection</h2>
+                <h2>Reflection & Learnings</h2>
             </div>
             <div class="section-content">
                 <div class="content-main">
                     <h3>Asking the Right Question</h3>
-                    <p>This project taught me that <strong>asking the right question is half the work</strong>. I could have approached this as a dry analysis of audio features over time, but framing it around a specific song—and a specific cultural moment—made the data feel personal. It turned statistics into a story about how we listen, not just what we listen to.</p>
+                    <p>This project taught me that <strong>asking the right question is half the work</strong>. I could have approached this as a dry analysis of audio features, but framing it around "Breathe"—a specific song from a specific cultural moment—made the data feel personal. It transformed statistics into a story about how we listen, not just what we listen to.</p>
                     
-                    <p>The provocation of "Would Faith Hill still be a hit?" gave me a narrative anchor. Every visualization decision flowed from that central question. When I was deciding which metrics to prioritize or how to structure the scrolling experience, I kept coming back to: Does this help answer the question in a way that feels true to both the data and the cultural context?</p>
+                    <p>The provocation gave me a narrative anchor. Every visualization decision flowed from that central question. When deciding which metrics to prioritize or how to structure scrolling, I kept asking: Does this answer the question in a way that's true to both data and cultural context?</p>
                     
                     <h3>Data as Translation</h3>
-                    <p>I also learned that <strong>data visualization is an act of translation</strong>. Raw numbers don't speak for themselves. My job was to shape the narrative arc—to decide which trends mattered most, how to sequence them, and when to step back and let the visuals do the work. Every design choice, from color to pacing, was about making the data accessible without dumbing it down.</p>
-                    
-                    <p>There's a tension in data storytelling between showing everything and showing what matters. I had access to dozens of audio features from Spotify, but not all of them advanced the story. Learning to edit—to choose tempo over timbre, energy over key signature—was as important as the technical work of building the visualizations.</p>
+                    <p>I learned that <strong>data visualization is an act of translation</strong>. Raw numbers don't speak for themselves. My job was shaping the narrative arc—deciding which trends mattered, how to sequence them, when to let visuals do the work. There's tension between showing everything and showing what matters. I had dozens of audio features but not all advanced the story. Learning to edit was as important as technical execution.</p>
                     
                     <h3>Cultural Context is Everything</h3>
-                    <p>Most importantly, this project reinforced that <strong>good data storytelling requires cultural context</strong>. Understanding <em>why</em> loudness increased or <em>why</em> songs got shorter means understanding platform economics, listener behavior, and industry incentives. The numbers are just the beginning. The story lives in what they reveal about us.</p>
+                    <p>Good data storytelling requires cultural context. Understanding <em>why</em> loudness increased or <em>why</em> songs shortened means understanding platform economics, listener behavior, industry incentives. The numbers are just the beginning. The story lives in what they reveal about us.</p>
                     
-                    <p>Without that context, the visualizations would be technically accurate but emotionally hollow. The streaming economy, the shift from albums to playlists, the way TikTok has further compressed attention spans—all of this had to be woven into the narrative. The data confirmed patterns we intuitively feel when we listen to the radio or open Spotify, but seeing it visualized made those patterns undeniable.</p>
+                    <p>Without context, visualizations would be technically accurate but emotionally hollow. The streaming economy, playlist culture, TikTok's attention compression—all had to be woven into the narrative. The data confirmed patterns we intuitively feel, but seeing it visualized made those patterns undeniable.</p>
                     
-                    <h3>What's Next</h3>
-                    <p>If I revisited this, I'd love to expand it—comparing genres independently to see if hip-hop and country music followed the same trajectory, or layering in sentiment analysis of lyrics to see if <em>what</em> we sing about has changed as much as <em>how</em> we sing it. There's also interesting work to be done around global music trends and how streaming has democratized (or homogenized) popular music across borders.</p>
+                    <h3>What I'd Do Differently</h3>
+                    <p>If I revisited this, I'd expand the analysis—comparing genres independently to see if hip-hop and country followed the same trajectory, or layering sentiment analysis to see if <em>what</em> we sing about changed as much as <em>how</em> we sing it. There's also interesting work around global music trends and whether streaming democratized or homogenized popular music across borders.</p>
                     
-                    <p>For now, though, I'm proud of building something that feels both analytically rigorous and emotionally resonant. That balance—honoring the data while telling a human story—is what I'm chasing in all my work.</p>
+                    <p>For now, I'm proud of building something both analytically rigorous and emotionally resonant. That balance—honoring data while telling a human story—is what I'm chasing in all my work.</p>
                 </div>
             </div>
         </div>

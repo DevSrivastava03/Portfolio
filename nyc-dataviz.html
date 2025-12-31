@@ -25,16 +25,19 @@
         </div>
     </nav>
 
-    <!-- Case Study Hero -->
     <section class="case-hero">
         <div class="case-hero-wrapper">
             <div class="case-meta">
                 <span class="meta-number">001</span>
-                <span class="meta-status">In Progress</span>
+                <span class="meta-status">Prototype in Developments</span>
             </div>
             
             <h1 class="case-title">NYC Urban Data Visualization</h1>
-            <p class="case-subtitle">Interactive 3D exploration of New York City's urban systems</p>
+            <p class="case-subtitle">A real-time, 3D lens on NYC’s movement, density, and infrastructure.</p>
+            <p class="case-subtitle" style="font-size:1.05rem; max-width: 62ch; margin-top: 12px;">
+                Built to reveal patterns that disappear in charts: flow, congestion, clustering, and the “pulse” of the city.
+            </p>
+
             
             <div class="case-info-grid">
                 <div class="info-item">
@@ -57,14 +60,23 @@
         </div>
     </section>
 
-    <!-- Featured Image -->
-    <section class="case-featured">
-        <div class="case-featured-wrapper">
-            <div class="featured-image gradient-cyan">
-                <div class="image-placeholder">3D Visualization Preview</div>
-            </div>
-        </div>
-    </section>
+
+<!-- Featured Image -->
+<section class="case-featured">
+  <div class="case-featured-wrapper">
+    <div class="featured-media">
+      <video
+        src="data%20viz/T2_0001-0720.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        class="featured-img"
+      ></video>
+    </div>
+    <p class="image-note">Prototype demo: the 3D system in motion (camera + depth + flow).</p>
+  </div>
+</section>
+
 
     <!-- Overview -->
     <section class="case-section">
@@ -175,21 +187,68 @@
                 <h2>Visual Explorations</h2>
             </div>
             <div class="visual-grid">
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-cyan">Wireframe Studies</div>
-                    <p class="visual-caption">Early wireframes exploring layout and control placement</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-cyan">3D Prototypes</div>
-                    <p class="visual-caption">Three.js prototypes testing rendering performance</p>
-                </div>
-                <div class="visual-item">
-                    <div class="visual-placeholder gradient-cyan">UI Components</div>
-                    <p class="visual-caption">Interface elements and control systems</p>
-                </div>
+                <!-- ✅ REPLACE THIS BLOCK -->
+            <div class="visual-item">
+            <img
+                src="data%20viz/Group%201.png"
+                alt="2D reference image / early exploration"
+                class="featured-img"
+                loading="lazy"
+            />
+            <p class="visual-caption">2D study used to guide translation into 3D structure and layering.</p>
+            </div>
+
+                <!-- ✅ REPLACE THIS BLOCK -->
+<
+
+                <!-- ✅ REPLACE THIS BLOCK -->
+<div class="visual-item">
+  <div class="featured-media">
+    <video
+      src="data%20viz/data.mp4"
+      controls
+      playsinline
+      preload="metadata"
+      class="featured-img"
+    ></video>
+  </div>
+  <p class="visual-caption">2D motion exploration: testing rhythm, density, and legibility.</p>
+</div>
+<div class="visual-item">
+  <img
+    src="data%20viz/NYC_R1.png"
+    alt="NYC 3D model still"
+    class="featured-img"
+    loading="lazy"
+  />
+  <p class="visual-caption">NYC 3D model iteration: spatial base layer for overlays.</p>
+</div>
             </div>
         </div>
     </section>
+<section class="case-section gray-bg">
+  <div class="case-section-wrapper">
+    <div class="section-header-small">
+      <h2>Movement Layers</h2>
+    </div>
+
+    <div class="visual-grid">
+      <div class="visual-item">
+        <div class="featured-media">
+          <video src="data%20viz/MTAFull_0215-0720.mp4" controls playsinline preload="metadata" class="featured-img"></video>
+        </div>
+        <p class="visual-caption">All subway lines together: network behavior + congestion clusters.</p>
+      </div>
+
+      <div class="visual-item">
+        <div class="featured-media">
+          <video src="data%20viz/Taxis_0001-0384.mp4" controls playsinline preload="metadata" class="featured-img"></video>
+        </div>
+        <p class="visual-caption">Taxi flow (top view): demand-driven movement compared to fixed rail.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Technical Implementation -->
     <section class="case-section">

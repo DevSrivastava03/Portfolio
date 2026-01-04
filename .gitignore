@@ -1,0 +1,16 @@
+.DS_Store
+**/.DS_Store
+
+# common caches/build junk
+.cache/
+.vscode/
+dist/
+build/
+.tmp/
+temp/
+
+# if you ever ran node here
+node_modules/
+
+# logs
+*.log

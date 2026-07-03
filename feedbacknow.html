@@ -8,52 +8,23 @@
     <link rel="stylesheet" href="case-study.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <!-- <nav class="nav">
-    <aside class="scroll-nav" aria-label="Case study navigation">
-  <a href="#overview" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Overview</span>
-  </a>
-  <a href="#research" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Research</span>
-  </a>
-  <a href="#hierarchy" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Hierarchy</span>
-  </a>
-  <a href="#walkthrough" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Guided Walkthrough</span>
-  </a>
-  <a href="#impact" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Impact</span>
-  </a>
-  <a href="#reflection" class="scroll-nav__item">
-    <span class="scroll-nav__dot"></span>
-    <span class="scroll-nav__label">Reflection</span>
-  </a>
-</aside> -->
 
-        <div class="nav-wrapper">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-mark">DS</span>
-                <span class="logo-divider">/</span>
-                <span class="logo-name">Dev Srivastava</span>
-            </a>
-            <a href="index.html" class="nav-back">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span>Back to Work</span>
-            </a>
-        </div>
-    </nav>
+    <div class="nav-wrapper">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-mark">DS</span>
+            <span class="logo-divider">/</span>
+            <span class="logo-name">Dev Srivastava</span>
+        </a>
+        <a href="index.html" class="nav-back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>Back to Work</span>
+        </a>
+    </div>
 
     <!-- Case Study Hero -->
-    <section class=" case-hero"id="overview">
+    <section class="case-hero" id="overview">
         <div class="case-hero-wrapper">
             <div class="case-meta">
                 <span class="meta-number">002</span>
@@ -69,12 +40,12 @@
                     <span class="info-value">8 weeks, Summer 2024</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Team</span>
-                    <span class="info-value">Steven Peltzman (CEO), Amisha Jaggi (Designer)</span>
-                </div>
-                <div class="info-item">
                     <span class="info-label">My Role</span>
                     <span class="info-value">Product Design, Data Visualization</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Team</span>
+                    <span class="info-value">Steven Peltzman (CEO), Amisha Jaggi (Designer)</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Tools</span>
@@ -86,20 +57,19 @@
 
     <!-- Featured Image -->
     <section class="case-featured">
-    <div class="case-featured-wrapper">
-        <div class="featured-image gradient-purple">
-            <img 
-                src="feedbacknow/Dashboard.png" 
-                alt="FeedbackNow B2B dashboard overview"
-                class="featured-img"
-            />
+        <div class="case-featured-wrapper">
+            <div class="featured-image gradient-purple">
+                <img 
+                    src="feedbacknow/Dashboard.png" 
+                    alt="FeedbackNow B2B dashboard overview"
+                    class="featured-img"
+                />
+            </div>
+            <p class="image-note">
+                A B2B dashboard redesigned to help sales teams tell persuasive stories during client demos.
+            </p>
         </div>
-        <p class="image-note">
-            A B2B dashboard redesigned to help sales teams tell persuasive stories during client demos.
-        </p>
-    </div>
-</section>
-
+    </section>
 
     <!-- Context Block -->
     <section class="context-block">
@@ -110,20 +80,6 @@
             <div class="context-right">
                 <p>FeedbackNow's B2B dashboard was cluttered, lacked hierarchy, and made it difficult for potential clients to quickly grasp how user feedback translated into actionable insights.</p>
                 <p>During my internship, I worked closely with CEO Steven Peltzman and designer Amisha Jaggi to redesign the dashboard not just for end users, but for the sales context where its story needed to be told.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Side by Side -->
-    <section class="side-by-side">
-        <div class="side-wrapper">
-            <!-- <div class="side-image gradient-purple">
-                <div class="image-placeholder">Old Dashboard</div>
-            </div> -->
-            <div class="side-text">
-                <h3>The Problem</h3>
-                <p>I sat in on sales demos and watched the struggle. Sales teams would jump between sections, trying to explain metrics while clients looked confused. The interface fought against the story they were trying to tell.</p>
-                <p>Charts competed for attention. Key insights were buried. Navigation assumed familiarity the prospects didn't have yet.</p>
             </div>
         </div>
     </section>
@@ -146,6 +102,17 @@
         </div>
     </section>
 
+    <!-- Side by Side - The Problem Details -->
+    <section class="side-by-side">
+        <div class="side-wrapper">
+            <div class="side-text">
+                <h3>The Problem</h3>
+                <p>I sat in on sales demos and watched the struggle. Sales teams would jump between sections, trying to explain metrics while clients looked confused. The interface fought against the story they were trying to tell.</p>
+                <p>Charts competed for attention. Key insights were buried. Navigation assumed familiarity the prospects didn't have yet.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Text Interlude -->
     <section class="text-interlude">
         <div class="interlude-wrapper">
@@ -155,192 +122,223 @@
     </section>
 
     <!-- Journey Section -->
-<section class="journey journey--type" id="research">
-  <div class="journey-wrapper">
+    <section class="journey journey--type" id="research">
+        <div class="journey-wrapper">
 
-    <header class="journey-head">
-      <p class="journey-eyebrow">Research Phase</p>
-      <h2 class="journey-title">From signal to action</h2>
-      <p class="journey-subtitle">
-        Instead of treating the dashboard like a reporting tool, I mapped the narrative sales teams needed
-        to tell during demos: <strong>physical signals</strong> → <strong>platform insight</strong> → <strong>real-time response</strong>.
-      </p>
-    </header>
+            <header class="journey-head">
+                <p class="journey-eyebrow">Research Phase</p>
+                <h2 class="journey-title">From signal to action</h2>
+                <p class="journey-subtitle">
+                    Instead of treating the dashboard like a reporting tool, I mapped the narrative sales teams needed
+                    to tell during demos: <strong>physical signals</strong> → <strong>platform insight</strong> → <strong>real-time response</strong>.
+                </p>
+            </header>
 
-    <div class="journey-steps">
+            <div class="journey-steps">
 
-      <article class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Step 01</span>
-          <span class="journey-step-line"></span>
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">Step 01</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Where signals begin</h3>
+                    <p class="journey-step-body">
+                        Customer experience issues start in physical spaces. I defined "signal hotspots" (lobby, conference rooms,
+                        restrooms) to ground the story in the real world and give demos a clear starting point.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">Step 02</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">How signals are captured</h3>
+                    <p class="journey-step-body">
+                        Frictionless sensors capture sentiment, time, and location so teams can quickly answer:
+                        <strong>what happened</strong>, <strong>where</strong>, and <strong>when</strong>.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">Step 03</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Turning signals into insight</h3>
+                    <p class="journey-step-body">
+                        Captured signals roll up into readable metrics that support a demo narrative. The goal wasn't "more charts",
+                        it was <strong>clear evidence</strong> that connects feedback to decisions.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">Step 04</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">The action moment</h3>
+                    <p class="journey-step-body">
+                        Alerts trigger when thresholds are crossed, turning the dashboard into an operations tool—not just a report.
+                        This "moment of action" became a key beat for sales demos and later shaped the guided walkthrough mode.
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="journey-footnote">
+                This narrative framing became the foundation for the redesigned hierarchy and the guided walkthrough mode.
+            </p>
+
         </div>
-        <h3 class="journey-step-title">Where signals begin</h3>
-        <p class="journey-step-body">
-          Customer experience issues start in physical spaces. I defined “signal hotspots” (lobby, conference rooms,
-          restrooms) to ground the story in the real world and give demos a clear starting point.
-        </p>
-      </article>
+    </section>
 
-      <article class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Step 02</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <h3 class="journey-step-title">How signals are captured</h3>
-        <p class="journey-step-body">
-          Frictionless sensors capture sentiment, time, and location so teams can quickly answer:
-          <strong>what happened</strong>, <strong>where</strong>, and <strong>when</strong>.
-        </p>
-      </article>
-
-      <article class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Step 03</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <h3 class="journey-step-title">Turning signals into insight</h3>
-        <p class="journey-step-body">
-          Captured signals roll up into readable metrics that support a demo narrative. The goal wasn’t “more charts”,
-          it was <strong>clear evidence</strong> that connects feedback to decisions.
-        </p>
-      </article>
-
-      <article class="journey-step">
-        <div class="journey-step-top">
-          <span class="journey-step-chip">Step 04</span>
-          <span class="journey-step-line"></span>
-        </div>
-        <h3 class="journey-step-title">The action moment</h3>
-        <p class="journey-step-body">
-          Alerts trigger when thresholds are crossed, turning the dashboard into an operations tool—not just a report.
-          This “moment of action” became a key beat for sales demos and later shaped the guided walkthrough mode.
-        </p>
-      </article>
-
-    </div>
-
-    <p class="journey-footnote">
-      This narrative framing became the foundation for the redesigned hierarchy and the guided walkthrough mode.
-    </p>
-
-  </div>
-</section>
-
-
-
-    <!-- Large Image -->
+    <!-- Large Image - Physical Context -->
     <section class="large-image-section">
-  <div class="large-image-wrapper">
-    <img 
-      src="feedbacknow/Restroom_devices.jpg"
-      alt="Annotated diagram showing physical feedback devices feeding into the FeedbackNow system"
-      class="featured-img"
-    />
-    <p class="image-caption">
-      Physical signals are intentionally structured so they can be surfaced in dashboards and escalated
-      as alerts without requiring interpretation during a live demo.
-    </p>
-  </div>
-</section>
+        <div class="large-image-wrapper">
+            <img 
+                src="feedbacknow/Restroom_devices.jpg"
+                alt="Annotated diagram showing physical feedback devices feeding into the FeedbackNow system"
+                class="featured-img"
+            />
+            <p class="image-caption">
+                Physical signals are intentionally structured so they can be surfaced in dashboards and escalated
+                as alerts without requiring interpretation during a live demo.
+            </p>
+        </div>
+    </section>
 
+    <!-- Side by Side Reverse - Hierarchy -->
+    <section class="side-by-side reverse" id="hierarchy">
+        <div class="side-wrapper">
+            <div class="side-text">
+                <h3>Establishing Hierarchy</h3>
+                <p>
+                    The redesign centered on one principle: <strong>lead with what matters during a live demo.</strong>
+                    I prioritized <strong>alerts and critical events</strong> at the top of the experience, then organized
+                    the rest as supporting context.
+                </p>
+                <p>
+                    This card is a hierarchy test: <strong>summary first</strong> (Today's counts), <strong>then details</strong>
+                    (timeline), with <strong>visual emphasis on urgency</strong> so sales reps can narrate without hunting.
+                </p>
+                <ul class="styled-list">
+                    <li><strong>Primary:</strong> Alerts + event type (fast "what happened?")</li>
+                    <li><strong>Secondary:</strong> Time + description (fast "when + why?")</li>
+                    <li><strong>Tertiary:</strong> Service start/end (context, not noise)</li>
+                </ul>
+            </div>
 
-    <!-- Side by Side Reverse -->
-    <!-- Side by Side Reverse -->
-<section class="side-by-side reverse" id="hierarchy">
-  <div class="side-wrapper">
-    <div class="side-text">
-      <h3>Establishing Hierarchy</h3>
-      <p>
-        The redesign centered on one principle: <strong>lead with what matters during a live demo.</strong>
-        I prioritized <strong>alerts and critical events</strong> at the top of the experience, then organized
-        the rest as supporting context.
-      </p>
-      <p>
-        This card is a hierarchy test: <strong>summary first</strong> (Today’s counts), <strong>then details</strong>
-        (timeline), with <strong>visual emphasis on urgency</strong> so sales reps can narrate without hunting.
-      </p>
-      <ul class="styled-list">
-        <li><strong>Primary:</strong> Alerts + event type (fast “what happened?”)</li>
-        <li><strong>Secondary:</strong> Time + description (fast “when + why?”)</li>
-        <li><strong>Tertiary:</strong> Service start/end (context, not noise)</li>
-      </ul>
-    </div>
+            <div class="side-image">
+                <img
+                    src="feedbacknow/cs.png"
+                    alt="Hierarchy study: events card prioritizing alerts, then timeline details"
+                    class="featured-img"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+    </section>
 
-    <div class="side-image">
-      <img
-        src="feedbacknow/cs.png"
-        alt="Hierarchy study: events card prioritizing alerts, then timeline details"
-        class="featured-img"
-        loading="lazy"
-      />
-    </div>
-  </div>
-</section>
+    <!-- Image Grid Section - Visual Components -->
+    <section class="image-grid-section">
+        <div class="grid-wrapper">
 
-<section class="image-grid-section">
-  <div class="grid-wrapper">
+            <!-- Alert Notification (vertical phone) -->
+            <div class="grid-item grid-item--full">
+                <video 
+                    src="feedbacknow/4-Alert_text-Mockup.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="grid-video video--tall">
+                </video>
+                <p class="grid-caption">
+                    Real-time alert escalation delivered directly to teams when thresholds are crossed.
+                </p>
+            </div>
 
-    <!-- Alert Notification (vertical phone) -->
-    <div class="grid-item grid-item--full">
-      <video 
-        src="feedbacknow/4-Alert_text-Mockup.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="grid-video video--tall">
-      </video>
-      <p class="grid-caption">
-        Real-time alert escalation delivered directly to teams when thresholds are crossed.
-      </p>
-    </div>
+            <!-- Sentiment Pie Chart (wide) -->
+            <div class="grid-item">
+                <video 
+                    src="feedbacknow/Pie chart_3.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="grid-video video--wide">
+                </video>
+                <p class="grid-caption">
+                    Sentiment distribution designed for instant readability during live demos.
+                </p>
+            </div>
 
-    <!-- Sentiment Pie Chart (wide) -->
-    <div class="grid-item">
-      <video 
-        src="feedbacknow/Pie chart_3.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="grid-video video--wide">
-      </video>
-      <p class="grid-caption">
-        Sentiment distribution designed for instant readability during live demos.
-      </p>
-    </div>
+            <!-- Traffic Bar Chart (GIF as image, wide) -->
+            <div class="grid-item">
+                <img 
+                    src="feedbacknow/Start@512p-25fps.gif"
+                    alt="Hourly traffic bar chart animation"
+                    class="grid-image-static"
+                    loading="lazy"
+                />
+                <p class="grid-caption">
+                    Hourly traffic patterns reveal usage spikes and service gaps over time.
+                </p>
+            </div>
 
-    <!-- Traffic Bar Chart (GIF as image, wide) -->
-    <div class="grid-item">
-      <img 
-        src="feedbacknow/Start@512p-25fps.gif"
-        alt="Hourly traffic bar chart animation"
-        class="grid-image-static"
-        loading="lazy"
-      />
-      <p class="grid-caption">
-        Hourly traffic patterns reveal usage spikes and service gaps over time.
-      </p>
-    </div>
+            <!-- Physical Context (wide image) -->
+            <div class="grid-item">
+                <img 
+                    src="feedbacknow/Building A Level 3 (1).jpg"
+                    alt="Building context where feedback signals originate"
+                    class="grid-image-static"
+                    loading="lazy"
+                />
+                <p class="grid-caption">
+                    Physical environments where feedback signals originate, grounding the system in real space.
+                </p>
+            </div>
 
-    <!-- Physical Context (wide image) -->
-    <div class="grid-item">
-      <img 
-        src="feedbacknow/Building A Level 3 (1).jpg"
-        alt="Building context where feedback signals originate"
-        class="grid-image-static"
-        loading="lazy"
-      />
-      <p class="grid-caption">
-        Physical environments where feedback signals originate, grounding the system in real space.
-      </p>
-    </div>
+        </div>
+    </section>
 
-  </div>
-</section>
+    <!-- Side by Side - Guided Walkthrough -->
+    <section class="side-by-side" id="walkthrough">
+        <div class="side-wrapper">
 
+            <div class="side-image">
+                <video
+                    src="feedbacknow/final final final final.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="featured-img"
+                ></video>
+            </div>
 
+            <div class="side-text">
+                <h3>Guided Walkthrough Mode</h3>
 
+                <p>
+                    Rather than creating a rigid presentation mode, I designed the dashboard
+                    to support a <strong>guided walkthrough</strong> that sales teams could control in real time.
+                </p>
+
+                <p>
+                    Alerts anchor the story, summaries establish context, and deeper metrics
+                    remain available without interrupting the narrative. Sales reps can move
+                    linearly when needed, or pivot based on client questions.
+                </p>
+
+                <p>
+                    This approach transformed the dashboard from a tool you navigate into a
+                    <strong>story you tell</strong>.
+                </p>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Full Quote -->
     <section class="full-quote">
@@ -349,44 +347,6 @@
             <p class="quote-attribution">— Sales team member after using redesigned dashboard</p>
         </div>
     </section>
-
-    <!-- Side by Side -->
-  <section class="side-by-side" id="walkthrough">
-  <div class="side-wrapper">
-
-    <div class="side-image">
-      <video
-        src="feedbacknow/final final final final.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        class="featured-img"
-      ></video>
-    </div>
-
-    <div class="side-text">
-      <h3>Guided Walkthrough Mode</h3>
-
-      <p>
-        Rather than creating a rigid presentation mode, I designed the dashboard
-        to support a <strong>guided walkthrough</strong> that sales teams could control in real time.
-      </p>
-
-      <p>
-        Alerts anchor the story, summaries establish context, and deeper metrics
-        remain available without interrupting the narrative. Sales reps can move
-        linearly when needed, or pivot based on client questions.
-      </p>
-
-      <p>
-        This approach transformed the dashboard from a tool you navigate into a
-        <strong>story you tell</strong>.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 
     <!-- Stats Section -->
     <section class="stats-section" id="impact">
@@ -411,9 +371,8 @@
         </div>
     </section>
 
-    
     <!-- Reflection Section -->
-   <section class="reflection-section" id="reflection">
+    <section class="reflection-section" id="reflection">
         <div class="reflection-wrapper">
             <div class="reflection-content">
                 <h2>What This Taught Me</h2>
@@ -426,10 +385,9 @@
 
     <!-- Closing Image -->
     <section class="closing-image">
-            <div class="closing-text">
-                <p>This internship showed me how thoughtful design can shape compelling narratives, make complex information feel simple, and directly influence business outcomes.</p>
-                <p>It reinforced my belief that great design is as much about storytelling as it is about usability—especially in B2B contexts where the product needs to sell itself before anyone can use it.</p>
-            </div>
+        <div class="closing-text">
+            <p>This internship showed me how thoughtful design can shape compelling narratives, make complex information feel simple, and directly influence business outcomes.</p>
+            <p>It reinforced my belief that great design is as much about storytelling as it is about usability—especially in B2B contexts where the product needs to sell itself before anyone can use it.</p>
         </div>
     </section>
 

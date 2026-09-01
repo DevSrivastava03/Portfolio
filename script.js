@@ -222,13 +222,14 @@ if (heroScroll) {
 if (heroScroll) {
     heroScroll.style.transition = 'opacity 0.3s ease';
 }
-// Case study scroll navigation
-const scrollNavItems = document.querySelectorAll('.scroll-nav__item');
-const scrollSections = ['overview', 'research', 'hierarchy', 'walkthrough', 'impact', 'reflection']
-  .map(id => document.getElementById(id))
-  .filter(Boolean);
+window.initCaseStudyScrollNav = function () {
+  const scrollNavItems = document.querySelectorAll('.scroll-nav__item');
+  const scrollSections = ['overview', 'research', 'hierarchy', 'walkthrough', 'impact', 'reflection']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
 
-if (scrollNavItems.length && scrollSections.length) {
+  if (!scrollNavItems.length || !scrollSections.length) return;
+
   const setActive = (id) => {
     scrollNavItems.forEach(item => {
       item.classList.toggle(
@@ -247,4 +248,6 @@ if (scrollNavItems.length && scrollSections.length) {
   });
 
   scrollSections.forEach(section => observer.observe(section));
-}
+};
+
+window.initCaseStudyScrollNav();

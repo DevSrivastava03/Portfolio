@@ -62,23 +62,25 @@ window.addEventListener('scroll', updateActiveNav);
 // Header Hide/Show on Scroll
 let lastScroll = 0;
 const nav = document.querySelector('.nav');
-const navHeight = nav.offsetHeight;
+const navHeight = nav ? nav.offsetHeight : 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > navHeight * 2) {
-        if (currentScroll > lastScroll) {
-            nav.style.transform = 'translateY(-100%)';
+if (nav) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > navHeight * 2) {
+            if (currentScroll > lastScroll) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
         } else {
             nav.style.transform = 'translateY(0)';
         }
-    } else {
-        nav.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-});
+        
+        lastScroll = currentScroll;
+    });
+}
 
 // Parallax Effect on Project Images
 window.addEventListener('scroll', () => {
@@ -151,6 +153,8 @@ contactMethods.forEach(method => {
 
 // Keyboard Navigation
 document.addEventListener('keydown', (e) => {
+    if (e.target.closest('input, textarea, [contenteditable]')) return;
+
     if (e.key === 'ArrowDown') {
         e.preventDefault();
         window.scrollBy({ 
@@ -164,16 +168,6 @@ document.addEventListener('keydown', (e) => {
             behavior: 'smooth' 
         });
     }
-});
-
-// Page Load Animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.8s ease';
-        document.body.style.opacity = '1';
-    }, 100);
 });
 
 // Efficient Resize Handler
@@ -203,7 +197,7 @@ const consoleStyles = {
 
 console.log('%c👋 Hello there!', consoleStyles.title);
 console.log('%cThanks for taking the time to explore my work.', consoleStyles.text);
-console.log('%cI\'m currently studying at Parsons and always excited to connect with fellow designers and creative minds.', consoleStyles.text);
+console.log('%cI\'m a Parsons graduate and product design intern at Exiger, always excited to connect with fellow designers and creative minds.', consoleStyles.text);
 console.log('%c\nLet\'s connect:', consoleStyles.text);
 console.log('%cEmail: devswaroop04@gmail.com', consoleStyles.link);
 console.log('%cLinkedIn: linkedin.com/in/dev-s-srivastava-90a651202/', consoleStyles.link);

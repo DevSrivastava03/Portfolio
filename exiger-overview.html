@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exiger Overview / Dev Srivastava</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="case-study.css">
+    <script>
+        (function () {
+            try {
+                if (sessionStorage.getItem('exiger-overview-auth') === 'granted') {
+                    document.documentElement.classList.add('is-unlocked');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-mark">DS</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-name">Dev Srivastava</span>
+            </a>
+            <a href="index.html" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Back to Work</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Password gate -->
+    <div class="case-lock" id="case-lock" role="dialog" aria-labelledby="case-lock-title" aria-modal="true">
+        <main class="case-lock-main">
+            <div class="case-lock-wrapper">
+                <p class="case-lock-kicker">Protected case study</p>
+                <h1 class="case-lock-title" id="case-lock-title">Exiger Overview</h1>
+                <p class="case-lock-copy">A redesign of an existing website overview experience, focused on improving clarity, information hierarchy, and consistency through research-informed design.</p>
+
+                <form class="lock-form" id="case-lock-form" autocomplete="off">
+                    <label class="lock-label" for="case-lock-input">Password</label>
+                    <div class="lock-row">
+                        <input
+                            class="lock-input"
+                            id="case-lock-input"
+                            type="password"
+                            name="access"
+                            required
+                            autofocus
+                            spellcheck="false"
+                            autocomplete="current-password"
+                        >
+                        <button class="lock-submit" type="submit">Enter</button>
+                    </div>
+                    <p class="lock-error" id="case-lock-error" role="alert"></p>
+                </form>
+
+                <p class="lock-note">This project is shared privately. If you were invited to review it, use the password you were given.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Case study -->
+    <div class="case-study-body">
+
+    <!-- Hero -->
+    <section class="case-hero" id="overview">
+        <div class="case-hero-wrapper">
+            <div class="case-meta">
+                <span class="meta-number">001</span>
+                <span class="meta-status">Private</span>
+            </div>
+
+            <img class="logo-lockup" src="exiger/logo.png" alt="Exiger">
+
+            <h1 class="case-title">Exiger Overview</h1>
+            <p class="case-subtitle">A redesign of an existing website overview experience, focused on improving clarity, information hierarchy, and consistency through research-informed design.</p>
+
+            <div class="case-info-grid">
+                <div class="info-item">
+                    <span class="info-label">Role</span>
+                    <span class="info-value">Product Designer</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Focus</span>
+                    <span class="info-value">UX/UI, Information Architecture, Design Systems</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Project</span>
+                    <span class="info-value">Website Overview Redesign</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Product</span>
+                    <span class="info-value">Supply chain risk overview</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="case-featured">
+        <div class="case-featured-wrapper">
+            <div class="featured-media featured-media--light">
+                <img
+                    src="exiger/new-overview.png"
+                    alt="Redesigned Exiger Overview page with summary metrics and a clustered global risk map"
+                    class="featured-img"
+                    fetchpriority="high"
+                >
+            </div>
+            <p class="image-note">The redesigned Overview leads with a small set of summary metrics, then a more focused geographic view.</p>
+        </div>
+    </section>
+
+    <!-- Overview / Context -->
+    <section class="context-block">
+        <div class="context-wrapper">
+            <div class="context-left">
+                <h2>The Overview page was carrying too much of the product at once.</h2>
+            </div>
+            <div class="context-right">
+                <p>I looked critically at an existing Overview experience for a supply chain risk platform. The page was meant to orient people: to show what needed attention, where risk was concentrated, and how to start working. Instead, it presented a dense field of widgets that competed for equal attention.</p>
+                <p>The problem was not only visual. The page needed clearer organization, a stronger hierarchy, and a more intentional system for presenting information so the Overview could actually function as an overview.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>The Problem</h2>
+            </header>
+            <div class="prose-narrow">
+                <p class="lead-paragraph">Evaluating the existing Overview made the core issue obvious: almost everything on the page was treated as equally important.</p>
+                <p>Widgets sat in a tight grid with similar scale, similar chrome, and similar visual weight. Empty or low-signal modules occupied the same space as critical alerts. The map was saturated with markers. Customization lived behind small, easy-to-miss controls. Related information was present, but the relationships between sections were hard to read at a glance.</p>
+                <p>The page asked users to assemble meaning themselves, rather than guiding them through it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="large-image-section">
+        <div class="large-image-wrapper">
+            <div class="artifact-frame artifact-scroll">
+                <img
+                    src="exiger/research-current-issues.png"
+                    alt="Current issues board documenting small buttons, missing widget previews, map overload, and excessive metrics"
+                    class="contain-img"
+                    loading="lazy"
+                >
+            </div>
+            <p class="image-caption">An evaluation of the existing Overview, organized around four recurring issues: control discoverability, customization without preview, map overload, and metric density.</p>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="quote-wrapper">
+            <div class="quote-item">
+                <p class="quote-text">Unclear hierarchy</p>
+                <p class="quote-caption">Cards, charts, lists, and empty states were given similar visual weight, so the page never established what to look at first.</p>
+            </div>
+            <div class="quote-item">
+                <p class="quote-text">Competing content</p>
+                <p class="quote-caption">Too many modules appeared at once. Individual insights were present, but they were difficult to isolate from the surrounding noise.</p>
+            </div>
+            <div class="quote-item">
+                <p class="quote-text">Inconsistent patterns</p>
+                <p class="quote-caption">Customization, template switching, and widget selection used small or incomplete patterns that did not form a coherent system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="side-by-side">
+        <div class="side-wrapper">
+            <div class="side-text">
+                <h3>A page that was hard to read as a whole</h3>
+                <p>Once populated, the original Overview became a wall of modules. Heatmaps, alert totals, activity lists, and empty financial cards all sat at similar scale. Key metrics were not consistently placed at the top of the experience. They had to be found.</p>
+                <p>That made the page difficult to understand at a glance, and even harder to narrate. There was no stable path from “what matters” to “where it is happening” to “what I should do next.”</p>
+            </div>
+            <div class="side-image">
+                <img
+                    src="exiger/old-dashboard-dense.png"
+                    alt="Original Overview showing a dense grid of similarly sized widget cards"
+                    class="featured-img"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="large-image-section large-image-section--white">
+        <div class="large-image-wrapper">
+            <img
+                src="exiger/old-dashboard-map.png"
+                alt="Original Overview with a densely marked world map surrounded by competing widgets"
+                class="featured-img framed-img"
+                loading="lazy"
+            >
+            <p class="image-caption">The original map carried too many markers, filters, and neighboring widgets at once, reducing its usefulness as a focusing tool.</p>
+        </div>
+    </section>
+
+    <!-- Research -->
+    <section class="journey journey--type" id="research">
+        <div class="journey-wrapper">
+            <header class="journey-head">
+                <p class="journey-eyebrow">Research / Discovery</p>
+                <h2 class="journey-title">Evaluating where the Overview created friction</h2>
+                <p class="journey-subtitle">
+                    I audited the existing experience and studied how other products handle maps, templates, widgets, and dashboard density. The goal was not to copy those products. It was to understand which patterns actually help people make sense of a complex overview.
+                </p>
+            </header>
+
+            <div class="journey-steps">
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">01</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Information hierarchy</h3>
+                    <p class="journey-step-body">
+                        The original page did not establish a clear hierarchy between summary metrics, geographic context, and supporting modules. Everything arrived with similar emphasis, so the Overview never resolved into a primary story.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">02</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Comprehension</h3>
+                    <p class="journey-step-body">
+                        Users had to work harder than necessary to understand what the page was communicating. Dense marker fields, overlapping widgets, and small action controls made it difficult to know where to focus.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">03</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Consistency</h3>
+                    <p class="journey-step-body">
+                        Widget selection showed names without visual previews. Template and customize actions were easy to miss. The page presented an opportunity to replace one-off treatments with a more cohesive set of components.
+                    </p>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-step-top">
+                        <span class="journey-step-chip">04</span>
+                        <span class="journey-step-line"></span>
+                    </div>
+                    <h3 class="journey-step-title">Navigation / flow</h3>
+                    <p class="journey-step-body">
+                        The organization of the page could better guide people through the information: a role or view first, a small set of signals next, then geographic context, then supporting activity, rather than a simultaneous field of modules.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>Looking at how other products create overview clarity</h2>
+            </header>
+            <p class="stats-intro" style="max-width: 68ch;">I compared approaches to maps, template switching, widget selection, and dashboard structure. The useful patterns were consistent: preview before commit, make the active view a first-class control, and keep dense data from flattening the hierarchy.</p>
+            <div class="artifact-frame artifact-scroll">
+                <img
+                    src="exiger/research-competitive.png"
+                    alt="Competitive research comparing map, template, widget, and dashboard patterns across other products"
+                    class="contain-img"
+                    loading="lazy"
+                >
+            </div>
+            <p class="image-caption">Research notes on how other products surface maps, templates, widget previews, and dashboard starting points.</p>
+        </div>
+    </section>
+
+    <!-- Design Direction -->
+    <section class="text-interlude">
+        <div class="interlude-wrapper">
+            <h2>The goal was not a more decorative page. It was a clearer system for communicating information.</h2>
+            <p>Every design decision had to help someone understand the Overview faster: what matters, where it is, and how the page is meant to be used.</p>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>Design principles</h2>
+            </header>
+            <div class="principle-grid">
+                <article class="principle-item">
+                    <h4>Clarity</h4>
+                    <p>Make important information immediately understandable. Lead with a short set of signals instead of asking people to scan a wall of modules.</p>
+                </article>
+                <article class="principle-item">
+                    <h4>Hierarchy</h4>
+                    <p>Create a stronger visual and informational order so users know what to look at first: summary, geography, then supporting activity.</p>
+                </article>
+                <article class="principle-item">
+                    <h4>Consistency</h4>
+                    <p>Use reusable patterns like cards, views, filters, and customization so the Overview feels like a system rather than a collection of widgets.</p>
+                </article>
+                <article class="principle-item">
+                    <h4>Scannability</h4>
+                    <p>Structure content so people can understand the page without reading everything linearly. Large numbers, grouped markers, and clear labels do the work.</p>
+                </article>
+                <article class="principle-item">
+                    <h4>Cohesion</h4>
+                    <p>Unify the visual language across metrics, map, activity, and customization so the experience holds together as one overview, not several products stacked together.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="side-by-side reverse">
+        <div class="side-wrapper">
+            <div class="side-image">
+                <img
+                    src="exiger/research-map-directions.png"
+                    alt="Design exploration comparing three ways to integrate a map into the Overview"
+                    class="featured-img"
+                    loading="lazy"
+                >
+            </div>
+            <div class="side-text">
+                <h3>Deciding what the map should do</h3>
+                <p>The map was one of the most important, and most overloaded, parts of the original page. I explored whether it should sit as a background, a side widget, or a quieter contextual layer.</p>
+                <p>The direction that held up was not “more map.” It was a map that preserves geographic context without drowning the metrics around it: clustered markers, readable filters, and enough space for the rest of the Overview to breathe.</p>
+                <ul class="styled-list">
+                    <li><strong>Background maps</strong> added context but increased cognitive load.</li>
+                    <li><strong>Side-widget maps</strong> protected the data, but risked making location feel secondary.</li>
+                    <li><strong>A quieter, clustered map</strong> kept geography visible without competing with summary information.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="large-image-section">
+        <div class="large-image-wrapper">
+            <div class="artifact-frame artifact-scroll">
+                <img
+                    src="exiger/research-widget-options.png"
+                    alt="Widget selection explorations comparing preview cards, descriptive lists, and hover previews"
+                    class="contain-img"
+                    loading="lazy"
+                >
+            </div>
+            <p class="image-caption">Widget selection was explored as a full preview grid, a descriptive list, and a list with hover preview, aiming to reduce trial-and-error during customization.</p>
+        </div>
+    </section>
+
+    <!-- Design System -->
+    <section class="case-section" id="system">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>A system, not a set of screens</h2>
+            </header>
+            <p class="lead-paragraph" style="max-width: 68ch; margin-bottom: 48px;">The redesign was built from reusable patterns: summary cards, view management, category filters, and a customization modal with a dedicated preview. The Overview is an arrangement of those parts, not a one-off layout.</p>
+
+            <div class="system-grid">
+                <div>
+                    <div class="artifact-frame">
+                        <img
+                            src="exiger/new-kpi-cards.png"
+                            alt="Redesigned metric cards with consistent icon, label, and value hierarchy"
+                            class="contain-img"
+                            loading="lazy"
+                        >
+                    </div>
+                    <p class="image-caption">Summary cards share a single structure: icon, label, and a dominant value. Color is reserved for meaning, not decoration.</p>
+                </div>
+                <div>
+                    <img
+                        src="exiger/new-metric-cards.gif"
+                        alt="Animated metric card cluster showing consistent card structure"
+                        class="metric-gif"
+                        loading="lazy"
+                    >
+                    <p class="image-caption">The same card pattern can hold different metrics without changing how the page is read.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="side-by-side">
+        <div class="side-wrapper">
+            <div class="side-text">
+                <h3>Customization with a preview</h3>
+                <p>The original “Add Widgets” experience listed names and categories, but not what a widget would look like. That forced trial-and-error. The redesigned modal keeps browsing lightweight, with search, category, title, and a short description, then shows a live preview of the selected widget before it is added.</p>
+                <ul class="styled-list">
+                    <li><strong>Typography:</strong> title, description, and preview value are clearly ranked.</li>
+                    <li><strong>Components:</strong> search, dropdown, selectable cards, and a primary Done action.</li>
+                    <li><strong>Hierarchy:</strong> choose on the left, confirm on the right.</li>
+                </ul>
+            </div>
+            <div class="side-image">
+                <img
+                    src="exiger/new-customize-preview.png"
+                    alt="Customize dashboard modal with widget list and a live preview of Total Alerts"
+                    class="featured-img"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <img
+                        src="exiger/new-customize-list.png"
+                        alt="Customize dashboard modal with search, category filter, and widget cards"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">Search and category filters make a large widget library browsable without turning the modal into another dense dashboard.</p>
+                </div>
+                <div class="visual-item">
+                    <img
+                        src="exiger/new-manage-views.png"
+                        alt="Manage Views menu offering curated layouts for Enterprise Risk, Supply Chain, and Compliance"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">Views make template switching a first-class control, instead of hiding it in the header.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="case-section gray-bg" id="comparison">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>Before → After</h2>
+            </header>
+            <p class="stats-intro" style="max-width: 62ch;">The original Overview asked people to parse a field of equal modules. The redesign sequences the same kind of information into a readable page.</p>
+
+            <div class="compare-grid">
+                <div class="compare-item">
+                    <span class="compare-label">Original Overview</span>
+                    <div class="compare-frame">
+                        <img
+                            src="exiger/old-dashboard-map.png"
+                            alt="Original Overview dashboard with dense map and many widgets"
+                            class="contain-img"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <span class="compare-label">Redesigned Overview</span>
+                    <div class="compare-frame">
+                        <img
+                            src="exiger/new-overview.png"
+                            alt="Redesigned Overview dashboard with summary metrics and clustered map"
+                            class="contain-img"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="compare-notes">
+                <div class="compare-note">
+                    <h4>Clearer hierarchy</h4>
+                    <p>Summary metrics now sit above the map, so the page has a starting point.</p>
+                </div>
+                <div class="compare-note">
+                    <h4>Stronger sectioning</h4>
+                    <p>The map is one focused module instead of a crowded field of competing cards.</p>
+                </div>
+                <div class="compare-note">
+                    <h4>Easier scanning</h4>
+                    <p>Clustered markers and a short KPI row replace a dense scatter of equal widgets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-section-wrapper">
+            <div class="compare-grid">
+                <div class="compare-item">
+                    <span class="compare-label">Original customization</span>
+                    <div class="compare-frame">
+                        <img
+                            src="exiger/old-add-widgets.png"
+                            alt="Original Add Widgets modal listing widget names without visual previews"
+                            class="contain-img"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <span class="compare-label">Redesigned customization</span>
+                    <div class="compare-frame">
+                        <img
+                            src="exiger/new-customize-preview.png"
+                            alt="Redesigned customize modal with descriptions and a widget preview"
+                            class="contain-img"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="compare-notes">
+                <div class="compare-note">
+                    <h4>Less guesswork</h4>
+                    <p>Names are paired with descriptions and a preview, so people can choose with more certainty.</p>
+                </div>
+                <div class="compare-note">
+                    <h4>More consistent components</h4>
+                    <p>Search, filters, cards, and a primary action replace a flat list of add buttons.</p>
+                </div>
+                <div class="compare-note">
+                    <h4>Improved grouping</h4>
+                    <p>Category and search keep a large library from becoming another overloaded page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Redesign -->
+    <section class="text-interlude">
+        <div class="interlude-wrapper">
+            <h2>The redesigned Overview is meant to be read in layers.</h2>
+            <p>A view, a few signals, a map, then supporting activity. The page still holds complexity. It just no longer presents all of it at the same time.</p>
+        </div>
+    </section>
+
+    <section class="case-featured">
+        <div class="case-featured-wrapper">
+            <div class="featured-media featured-media--light">
+                <img
+                    src="exiger/new-overview.png"
+                    alt="Full redesigned Overview with Default View, KPI row, and world map"
+                    class="featured-img"
+                    loading="lazy"
+                >
+            </div>
+            <p class="image-note">Default View, a short metric row, and a clustered map form the primary scan path.</p>
+        </div>
+    </section>
+
+    <section class="large-image-section">
+        <div class="large-image-wrapper">
+            <img
+                src="exiger/new-activity.png"
+                alt="Redesigned Overview activity section with recent alerts, command centers, and recently updated companies"
+                class="featured-img framed-img"
+                loading="lazy"
+            >
+            <p class="image-caption">Supporting modules like recent alerts, command centers, recently viewed, and recently updated sit below the primary scan, grouped instead of scattered.</p>
+        </div>
+    </section>
+
+    <section class="side-by-side reverse">
+        <div class="side-wrapper">
+            <div class="side-image">
+                <img
+                    src="exiger/new-manage-views.png"
+                    alt="Manage Views overlay on the redesigned Overview"
+                    class="featured-img"
+                    loading="lazy"
+                >
+            </div>
+            <div class="side-text">
+                <h3>Views as a first-class control</h3>
+                <p>The original page hid template switching in a small header control. The redesign treats templates as part of the page language: a visible Default View, an edit affordance, and a menu of curated layouts for common roles.</p>
+                <p>That change is structural. It tells people the Overview is not one generic dashboard. It is a set of intentional arrangements of the same system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section gray-bg">
+        <div class="case-section-wrapper">
+            <header class="section-header-small">
+                <h2>Making the platform’s building blocks clearer</h2>
+            </header>
+            <p class="stats-intro" style="max-width: 68ch;">Templates, presets, and customization were supposed to be part of the platform. The work was not to invent them. It was to make them clearer, easier to find, and more complete as a system.</p>
+            <div class="visual-grid">
+                <div class="visual-item">
+                    <img
+                        src="exiger/old-empty-state.png"
+                        alt="Original Overview empty state prompting users to select a template or add widgets"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">The empty state already pointed to templates and widgets. Those starting points needed to be clearer, and the populated page still lacked a readable hierarchy.</p>
+                </div>
+                <div class="visual-item">
+                    <img
+                        src="exiger/old-persona-dropdown.png"
+                        alt="Original template dropdown listing roles such as CISO and Head of Risk and Compliance"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">Template switching was part of the platform, but it lived in a compact header control that was easy to overlook.</p>
+                </div>
+                <div class="visual-item">
+                    <img
+                        src="exiger/old-persona-presets.png"
+                        alt="Original Customize Dashboard modal showing template presets"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">Role-based templates were meant to give people a starting point. They needed a clearer place in the interface, not a buried modal.</p>
+                </div>
+                <div class="visual-item">
+                    <img
+                        src="exiger/old-add-widgets-risk.png"
+                        alt="Original Add Widgets modal filtered to the Risk category"
+                        class="featured-img"
+                        loading="lazy"
+                    >
+                    <p class="visual-caption">Category filters were part of the intended customize flow. They needed a clearer pattern, including a preview of the widget itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Improvements -->
+    <section class="stats-section" id="impact">
+        <div class="stats-wrapper">
+            <h2>Key improvements</h2>
+            <p class="stats-intro">The redesign did not add more information. It changed how the existing information is ordered, grouped, and presented.</p>
+            <div class="process-grid">
+                <div class="process-item">
+                    <span class="process-number">01</span>
+                    <h4>Clearer hierarchy</h4>
+                    <p>Information was reorganized so the page can be understood at a glance: a few summary metrics first, then geography, then supporting activity.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-number">02</span>
+                    <h4>Better content structure</h4>
+                    <p>Related information is grouped into a stable sequence instead of a simultaneous grid of equal cards.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-number">03</span>
+                    <h4>Stronger design-system usage</h4>
+                    <p>Reusable cards, views, filters, and a preview-based customize pattern make the Overview feel like one system.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-number">04</span>
+                    <h4>Improved scannability</h4>
+                    <p>Clustered map markers, large metric values, and clearer sectioning let people identify what matters without reading the page linearly.</p>
+                </div>
+                <div class="process-item">
+                    <span class="process-number">05</span>
+                    <h4>More intentional visual design</h4>
+                    <p>The visual system supports the content instead of competing with it. Density is still available. It is no longer the default state of the Overview.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection -->
+    <section class="reflection-section" id="reflection">
+        <div class="reflection-wrapper">
+            <div class="reflection-content">
+                <h2>Reflection</h2>
+                <p class="lead-paragraph">This project was a reminder that overview pages fail quietly. They can contain the right data and still not communicate.</p>
+                <p class="reflection-text">The work was less about inventing new screens and more about deciding what the page is for. Once that was clear, hierarchy, grouping, and component patterns became the actual design problem, not polish for its own sake.</p>
+                <p class="reflection-text">I would still iterate on how views, customization, and the map share attention. But the takeaway is simple: thoughtful product design improves an existing experience by looking past visual finish and addressing structure, systems, and comprehension.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="case-nav">
+        <div class="case-nav-wrapper">
+            <a href="therapy-beagle.html" class="case-nav-link">
+                <span class="nav-label">Next Project</span>
+                <span class="nav-title">Therapy Beagle</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </a>
+            <a href="index.html#work" class="case-nav-link-center">All Projects</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <p class="footer-copyright">© 2024 Dev Srivastava</p>
+                <p class="footer-location">New York, NY</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- end .case-study-body -->
+
+    <script src="script.js"></script>
+    <script src="exiger-auth.js"></script>
+</body>
+</html>

@@ -381,6 +381,32 @@ body {
     border-radius: 8px;
 }
 
+.preview-image--logo {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+}
+
+.preview-image--logo .preview-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image--logo img {
+    width: 70%;
+    height: auto;
+    max-height: 36%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0;
+}
+
+.preview-image--logo .preview-label {
+    display: none;
+}
+
 .preview-container:hover .preview-image {
     transform: scale(1.02);
 }
